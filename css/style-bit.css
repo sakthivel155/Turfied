@@ -1,0 +1,10 @@
+.br-left {
+  border-top-left-radius: var(--br-15);
+  border-bottom-left-radius: var(--br-15);
+}
+.br-top-right {
+  border-top-right-radius: var(--br-15);
+}
+.br-bottom-right {
+  border-bottom-right-radius: var(--br-15);
+}

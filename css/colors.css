@@ -1,0 +1,13 @@
+:root {
+  /* background-color */
+  --bg-default: #f1f3f2;
+  --bg-white: #fff;
+  --bg-green: #00b562;
+  --bg-green-100: #037a43;
+
+  /* primary-color */
+  --c-black: #000;
+  --c-white: #fff;
+  --c-black-100: rgba(59, 69, 64, 1);
+  --c-gray-100: #758a80;
+}

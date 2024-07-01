@@ -1,0 +1,32 @@
+.default-btn {
+  outline: none;
+  border: none;
+  background: none;
+  user-select: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-signup:hover,
+.menu-wrapper li a:hover {
+  opacity: 50%;
+  transition: opacity 200ms;
+}
+
+.book-btn {
+  padding: 10px 30px;
+  color: var(--c-white);
+  font-family: var(--font-medium);
+  font-size: var(--f-18);
+  background-color: var(--bg-green);
+  border-radius: var(--br-10);
+  transition: background-color 300ms;
+}
+.book-btn:hover {
+  background-color: var(--bg-green-100);
+  transition: background-color 400ms;
+}
+.nav-booknow-btn{
+  display: none;
+}

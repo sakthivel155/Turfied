@@ -1,0 +1,75 @@
+@media screen and (max-width: 1400px) {
+    .text-part {
+       width:435px;
+       
+      }  
+      .text-part > * {
+        width: 100%;
+      }
+}
+
+@media screen and (max-width: 1200px) {
+    .gallary-part , .text-part{
+       width: 50%;
+    }
+    
+    .text-part {
+        width:435px;
+        
+       }
+    .gallary-part div img{
+        width: 100%;
+    }
+    .footer-links {
+        gap: 3rem;
+      }
+
+}
+@media screen and (max-width:850px) {
+    
+   .menu-wrapper ,.login-signup,.landingpage-booknow-btn{
+    display: none;
+   } 
+   .nav-booknow-btn{
+    display: flex;
+    justify-content: end;
+
+   }
+    .landing-page{
+        padding-top: 40px;
+        flex-wrap: wrap;
+
+    }
+    .gallary-part , .text-part{
+        width: 100%;
+     }
+     .text-part{
+        padding: 1rem;
+     }
+     .gallary-part div {
+        width: 100%;
+        object-fit: cover;
+     }
+
+     .features-list {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        padding: 1rem;
+      }
+      .footer-wrapper{
+        flex-wrap: wrap; 
+        row-gap: 1rem;
+        padding: 40px 50px;
+      }
+     .footer-bar{
+        display:block;
+     }
+}
+@media screen and (max-width:600px) {
+    .footer-links {
+        flex-wrap: wrap;
+      }
+     h2{
+      font-size: var(--f-20);
+     } 
+}
