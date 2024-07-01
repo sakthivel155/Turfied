@@ -73,3 +73,35 @@
       font-size: var(--f-20);
      } 
 }
+@media screen and (max-width:400px) {
+   .navbar-wrapper {
+      padding: 10px 20px;
+    }
+    .app-logo {
+      width: 100px;
+    }
+    .nav-booknow-btn{
+      padding:10px;
+    }
+    .landing-page{
+      padding: 10px;
+    }
+    .text-part h1{
+      font-size: 24px;
+    }
+    .text-part p{
+      font-size: 20px;
+    }
+    .sports-list,.bg-white-section{
+      margin: 20px 15px;
+    }
+    h2{
+      font-size: var(--f-16);
+     }
+     .footer-wrapper{
+      padding: 20px 20px;
+     } 
+     .features-list div p{
+      font-size: 16px;
+     }
+}
