@@ -1,44 +1,39 @@
 :root {
-  --w-full: 100%;
-  --w-half: 50%;
-  /* font-size */
-  --f-16: 16px;
-  --f-18: 18px;
-  --f-20: 20px;
-  --f-30: 30px;
+	--w-half: 50%;
+	/* font-size */
+	--f-16: 16px;
+	--f-18: 18px;
+	--f-20: 20px;
+	--f-30: 30px;
 
-  /* border-radius */
-  --br-10: 10px;
-  --br-15: 15px;
-  --br-25: 25px;
+	/* border-radius */
+	--br-10: 10px;
+	--br-15: 15px;
+	--br-25: 25px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: var(--bg-default);
-  font-family: var(--font-regular);
-  font-size: 16px;
-  color: var(--c-black-100);
-  line-height: 1.5;
-}
-a,
-.login-signup {
-  text-decoration: none;
-  color: var(--c-black-100);
+	background-color: var(--bg-default);
+	font-family: var(--font-regular);
+	font-size: 16px;
+	color: var(--c-black-100);
+	line-height: 1.5;
 }
 
-ul,
-li {
-  list-style: none;
+a {
+	text-decoration: none;
 }
-.transition {
-  transition: fill 500ms;
+
+ul {
+	list-style: none;
 }
-::-webkit-scrollbar{
-  display: none;
+
+::-webkit-scrollbar {
+	display: none;
 }

@@ -1,200 +1,201 @@
 .app-container {
-  max-width: 1533px;
-  margin: 0 auto;
-}
-/* navbar */
-.navbar-wrapper {
-  padding: 10px 48px;
-  background-color: var(--bg-white);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.app-logo {
-  width: 130px;
-  height: max-content;
-}
-.menu-wrapper{
-  display: flex;
-  gap: 3.5rem;
-}
-.footer-menu-wrapper{
-  display: flex;
-  justify-content: space-around;
-}
-.menu-wrapper li a,.footer-menu-wrapper li a,
-.login-signup {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-medium);
-  font-size: var(--f-20);
-  opacity: 100%;
-  transition: opacity 200ms;
+	max-width: 1533px;
+	margin: 0 auto;
 }
 
-/* landing-page */
+/* navbar */
+.navbar-wrapper {
+	padding: 10px 2em;
+	background-color: var(--bg-white);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.app-logo {
+	width: 130px;
+	height: max-content;
+}
+
+.menu-wrapper {
+	display: flex;
+	gap: 3.5rem;
+}
+
+/* landing-page section */
 .landing-page {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--bg-white);
-  padding: 89px 48px 35px 48px;
-  border-radius: 0 0 var(--br-25) var(--br-25);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	display: flex;
+	justify-content: space-between;
+	padding: 89px 48px 35px 48px;
+	background-color: var(--bg-white);
+	border-radius: 0 0 var(--br-25) var(--br-25);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .text-part {
-  display: flex;
-  flex-direction: column;
-  width: var(--w-half);
-  margin: auto 0;
+	width: var(--w-half);
+	margin: auto 0;
 }
 
-.text-part > * {
-  display: inline-block;
-  width: 68%;
+.text-part>* {
+	width: 68%;
 }
+
 .text-part h1 {
-  font-family: var(--font-black);
-  font-size: var(--f-30);
-  
-  line-height: 1.6;
+	font-family: var(--font-black);
+	font-size: var(--f-30);
 }
+
 .text-part p,
 .text-part div {
-  font-family: var(--font-medium);
-  font-size: var(--f-20);
-  color: var(--c-gray-100);
-  margin-top: 24px;
+	font-family: var(--font-medium);
+	font-size: var(--f-20);
+	color: var(--c-gray-100);
+	margin-top: 24px;
 }
 
 .gallary-part {
-  display: flex;
- 
-}
-.gallary-part > div {
-  display: flex;
-  flex-direction: column;
- 
+	display: flex;
 }
 
-/* sports-list */
+.gallary-part div {
+	display: flex;
+	flex-direction: column;
+
+}
+
+/* sports-list section*/
 .bg-white-section {
-  margin: 48px;
-  
-  background-color: var(--bg-white);
-  border-radius: var(--br-15);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  
+	background-color: var(--bg-white);
+	margin: 48px;
+	border-radius: var(--br-15);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
 }
+
 .bg-white-section h2 {
-  font-family: var(--font-medium);
-  padding:25px;
+	padding: 25px;
+	font-family: var(--font-medium);
 }
-.sports-list div {
-  display: flex;
-  gap:1rem;
-  padding: 1rem;
-  flex-shrink: 0;
-  overflow-x: auto;
-  
-  
+
+.sports-list {
+	display: flex;
+	justify-content: space-around;
+	flex-shrink: 0;
+	gap: 1rem;
+	padding: 1rem;
+	overflow-x: auto;
+
 }
+
 .sports-list-card {
-  position: relative;
+	position: relative;
 }
+
 .sports-list-card h3 {
-  position: absolute;
-  bottom: 30px;
-  left: 40px;
-  font-size: var(--f-18);
-  color: var(--c-white);
-  z-index: 1;
+	font-size: var(--f-18);
+	color: var(--c-white);
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	z-index: 1;
 }
 
 /* features-list */
 .features-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 30px;
-  padding: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	row-gap: 30px;
+	padding: 1rem;
 }
+
 .features-list div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
 }
+
 .features-list div img {
-  height: 100px;
-  width: max-content;
+	width: max-content;
+	height: 100px;
 }
+
 .features-list div p {
-  font-family: var(--font-medium);
-  font-size: var(--f-18);
-  color: var(--c-black-100);
+	font-family: var(--font-medium);
+	font-size: var(--f-18);
+	color: var(--c-black-100);
 }
+
 /* footer */
 .footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 80px 100px;
-  color: var(--c-gray-100);
+	display: flex;
+	justify-content: space-between;
+	padding: 80px 100px;
+	color: var(--c-gray-100);
 }
+
+.footer-column {
+	width: max-content;
+	font-family: var(--font-medium);
+}
+
 .footer-logo {
-  width: 130px;
-  height: max-content;
-  background-color: #3a453f;
-  padding: 0 0 5px 10px;
-  margin-bottom: 30px;
-  border-radius: var(--br-10);
+	width: 130px;
+	height: max-content;
+	padding: 0 0 5px 10px;
+	background-color: #3a453f;
+	margin-bottom: 30px;
+	border-radius: var(--br-10);
 }
 
 .footer-links {
-  display: flex;
-  gap: 6rem;
-}
-.footer-column {
-  width: max-content;
-  /* margin:50px 0px; */
-  font-family: var(--font-medium);
+	display: flex;
+	gap: 6rem;
 }
 
 .footer-column h3 {
-  font-weight: 500;
-  font-size: var(--f-16);
-  color: var(--c-gray-100);
+	font-weight: 500;
+	font-size: var(--f-16);
+	color: var(--c-gray-100);
 }
+
 .footer-column div {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
+
 .footer-column div a {
-  font-weight: 700;
-  font-size: var(--f-16);
-  color: var(--c-gray-100);
-  margin: 20px 0px;
+	font-weight: 700;
+	font-size: var(--f-16);
+	color: var(--c-gray-100);
+	margin: 20px 0px;
 }
+
 /* footer-bar */
-.footer-bar{
-  background-color: var(--bg-white);
-  position: sticky;
-  bottom: 0;
-  z-index: 2;
+.footer-bar {
+	background-color: var(--bg-white);
+	position: sticky;
+	bottom: 0;
+	z-index: 2;
 }
-.footer-bar ul li a {
-  flex-direction: column;
-  row-gap: 0;
-  width: 50px;
-  margin: 5px;
-  font-size: 16px;
+
+.footer-menu-wrapper {
+	display: flex;
+	justify-content: space-around;
 }
-.footer-bar{
-  display: none;
+
+.footer-menu-wrapper li a {
+	flex-direction: column;
+	row-gap: 0;
+	width: 50px;
+	font-size: 16px;
+	margin: 5px;
 }

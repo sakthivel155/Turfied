@@ -1,12 +1,14 @@
+/* font | color | Typography */
 @import url("./fonts.css");
 @import url("./colors.css");
+/* Typography */
 
 @import url("./buttons.css");
+@import url("./style-bit.css");
 
 @import url("./global.css");
 
-@import url("./style-bit.css");
-
+/* Home page */
 @import url("./main.css");
 
 @import url("./responsive.css");
