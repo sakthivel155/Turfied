@@ -10,5 +10,6 @@
 
 /* Home page */
 @import url("./main.css");
+@import url("./pages/book.css");
 
 @import url("./responsive.css");
