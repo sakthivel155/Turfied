@@ -1,5 +1,111 @@
+.search-banner{
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: var(--c-gray-200);
+    user-select: none;
+}
+
+.search-container{
+    display: flex;
+}
+.search-city,.search-venue,.multiselect{
+    width: 320px; 
+    position: relative;
+}
+
+.select-box {
+    cursor: pointer;
+    padding:10px 14px 10px 10px ;
+    font-size: var(--f-16);
+    border:1px solid var(--c-gray-300);
+    border-radius: 0.5rem;
+    background-color: var(--c-white);
+}
+.search-icon{
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    width: 17px;
+}
+.dropdown{
+
+    position: absolute;
+    width: 20px;
+    right: 15px;
+    top: 12px;
+    transform: rotate(0deg);
+    transition: transform .5s;
+}
+.rotate {
+    transform: rotate(180deg);
+    
+}
+.search-input {
+    width: 300px;
+    padding:10px 10px 10px 40px ;
+    background-color:var(--c-white);
+    font-size: var(--f-16);
+    border:1px solid var(--c-gray-300);
+    border-radius: 0.5rem;
+    outline: none;
+    line-height: 1.5;
+}
+.result-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin:10px 10px 10px 35px ;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 20;
+}
+.result-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.result-box li {
+    padding: 10px;
+    cursor: pointer;
+}
+.result-box li:hover {
+    background: #f0f0f0;
+}
 
 
 
 
+        
+        .options {
+            display: none; /* Set to 'none' initially */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            background-color: white;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .option {
+			color: #333;
+            padding: 10px;
+            cursor: pointer;
+            display: block; /* Ensure each option is displayed as a block */
+        }
+        .option:hover {
+			background-color: #f0f0f0;
+        }
+        .option input {
+			margin-right: 10px;
+            vertical-align: middle;
+        }
 

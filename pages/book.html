@@ -1,78 +1,10 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Multiselect Dropdown</title>
-    <style>
-		
-.search-icon{
-    position: relative;
-    left: 33px;
-    width: 15px; 
-}
-.search-box{
-    padding:10px 10px 10px 35px ;
-    font-size: var(--f-16);
-    border:2px solid var(--c-gray-300);
-    border-radius: 0.5rem;
-    background-color:var(--c-gray-200);
-    outline: none;
-}
-.search-container{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 35px;
-	background-color: var(--c-gray-200);
-}
-
-.search-wrapper {
-	display: flex;
-	align-items: center;
-        }
-        .search-wrapper .multiselect {
-			width: 300px; /* Adjust width to your preference */
-			margin-left: 15px;
-            position: relative;	
-        }
-        .search-wrapper .select-box {
-			cursor: pointer;
-			padding:10px 10px 10px 10px ;
-			font-size: var(--f-16);
-			border:2px solid var(--c-gray-300);
-			border-radius: 0.5rem;
-			background-color:var(--c-gray-200);
-        }
-        .search-wrapper .options {
-            display: none; /* Set to 'none' initially */
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            background-color: white;
-            max-height: 200px;
-            overflow-y: auto;
-            z-index: 1000;
-        }
-        .search-wrapper .option {
-			color: #333;
-            padding: 10px;
-            cursor: pointer;
-            display: block; /* Ensure each option is displayed as a block */
-        }
-        .search-wrapper .option:hover {
-			background-color: #f0f0f0;
-        }
-        .search-wrapper .option input {
-			margin-right: 10px;
-            vertical-align: middle;
-        }
-		</style>
-<link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/root.css">
 </head>
 <body>
 	<header class="navbar-wrapper">
@@ -212,17 +144,37 @@
 			</div>
 		</nav>
 	</header>
-	<div class="search-container">
+	<div class="search-banner">
+		<div>
+			<h3> Discover and Book Top Sports Complexes in Chennai Online</h3>
+		</div>
+		<div class="search-container">
+			<div class="search-city">
+				<div class="search-box">
+					<img class="search-icon" src="../assets/icons/book-page/location-select.svg" alt="search-icon">
+					<input type="text" class="search-input" id="search-area" autocomplete="off" placeholder="Search for a city,place...">
+				</div>
+				<div class="result-box" id="area-result-box">
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+			</div>
 
-			<h3>Discover and Book Top Sports Complexes in Chennai Online</h3>
-		
-		<div class="search-wrapper">
-			<img class="search-icon" src="../assets/icons/book-page/search-icon.svg" alt="search-icon">
-			<input type="text" class="search-box" id="search-area" placeholder="Select for cities,places...">
-			<img class="search-icon" src="../assets/icons/book-page/search-icon.svg" alt="search-icon">
-			<input type="text" class="search-box" id="search-venue" placeholder="Search by venue name">
+			
+			<div class="search-venue">
+				<div class="search-box">
+					<img class="search-icon" src="../assets/icons/book-page/search-icon.svg" alt="search-icon">
+					<input type="text"  class="search-input" id="search-venue" autocomplete="off" placeholder="Search venue name">
+				</div>
+				<div class="result-box" id="venue-result-box">
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+			</div>
 			<div class="multiselect">
-				<div class="select-box">All sports</div>
+				<div class="select-box">All sports</div><img class="dropdown" src="../assets/icons/book-page/dropdown-arrow-svgrepo-com.svg" alt="">
 				<div class="options">
 					<label class="option"><input type="checkbox" value="Football"> Football</label>
 					<label class="option"><input type="checkbox" value="Basketball"> Basketball</label>
@@ -395,41 +347,7 @@
 			</li>
 		</ul>
 	</div>
-    <script>
-        const selectBox = document.querySelector('.select-box');
-        const optionsContainer = document.querySelector('.options');
-        const checkboxes = document.querySelectorAll('.option input');
-
-        selectBox.addEventListener('click', () => {
-            optionsContainer.style.display = optionsContainer.style.display === 'block' ? 'none' : 'block';
-        });
-
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', updateSelectBox);
-        });
-
-        function updateSelectBox() {
-            const selectedOptions = Array.from(checkboxes)
-                .filter(checkbox => checkbox.checked)
-                .map(checkbox => checkbox.value);
-            
-            if (selectedOptions.length === 0) {
-                selectBox.textContent = 'All sports';
-            } else if (selectedOptions.length === checkboxes.length) {
-                selectBox.textContent = 'All sports';
-            } else {
-                selectBox.textContent = selectedOptions.join(', ');
-            }
-        }
-
-        document.addEventListener('click', (e) => {
-            if (!selectBox.contains(e.target) && !optionsContainer.contains(e.target)) {
-                optionsContainer.style.display = 'none';
-            }
-        });
-    </script>
+	<script type="module" src="../js/components/multiSelectDropdown.js"></script>
+	<script type="module" src="../js/components/areaSearchFilter.js"></script>
 </body>
 </html>
-=======
-book
->>>>>>> 94ddbb3a9759d7595bb859c61fffe5102b6f28a3
