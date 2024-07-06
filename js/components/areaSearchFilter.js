@@ -3,7 +3,7 @@ import { state } from "./data.js";
 let availableKeywords = [];
         Object.entries(state).forEach(([key, value]) => {
             value.forEach((city) => {
-                availableKeywords.push(city + ", " + key);
+                availableKeywords.push("<span class='city'>"+ city +"</span>"+" "+"<span class='state'>"+ key +"</span>");
             });
         });
         
@@ -36,7 +36,7 @@ let availableKeywords = [];
             let listItems = Result_box.querySelectorAll('li');
             listItems.forEach(item => {
                 item.addEventListener('click', function() {
-                    Input_box.value = this.textContent;
+                    Input_box.value = this.textContent.replace(" ", ", ");
                     Result_box.style.display = 'none';
                 });
             });

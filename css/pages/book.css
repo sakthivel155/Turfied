@@ -54,13 +54,14 @@
 }
 .result-box {
     position: absolute;
-    top: 100%;
-    left: 0;
-    margin:10px 10px 10px 35px ;
+    top: 105%;
+    margin-left:26px;
+    width: 85%;
     background: white;
-    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius:5px;
     border-top: none;
-    max-height: 300px;
+    max-height: 261px;
     overflow-y: auto;
     display: none;
     z-index: 20;
@@ -71,11 +72,21 @@
     margin: 0;
 }
 .result-box li {
+    width: 100%;
     padding: 10px;
     cursor: pointer;
 }
 .result-box li:hover {
-    background: #f0f0f0;
+    background: var(--c-gray-400);
+    color:var(--c-green);
+}
+.result-box li .city{
+    display: block;
+    font-weight: 600;
+}
+.result-box li .state{
+    display: block;
+    font-size: 14px;
 }
 
 
@@ -88,18 +99,19 @@
             top: 100%;
             left: 0;
             width: 100%;
+            border-radius:5px;
             margin-top: 5px;
-            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             background-color: white;
-            max-height: 200px;
+            max-height: max-content;
             overflow-y: auto;
             z-index: 1000;
         }
         .option {
+            display: block; /* Ensure each option is displayed as a block */
 			color: #333;
             padding: 10px;
             cursor: pointer;
-            display: block; /* Ensure each option is displayed as a block */
         }
         .option:hover {
 			background-color: #f0f0f0;
@@ -108,4 +120,9 @@
 			margin-right: 10px;
             vertical-align: middle;
         }
+.turf-list-wrapper{
 
+}
+.turf-card{
+
+}

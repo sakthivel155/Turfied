@@ -144,47 +144,62 @@
 			</div>
 		</nav>
 	</header>
-	<div class="search-banner">
-		<div>
-			<h3> Discover and Book Top Sports Complexes in Chennai Online</h3>
-		</div>
-		<div class="search-container">
-			<div class="search-city">
-				<div class="search-box">
-					<img class="search-icon" src="../assets/icons/book-page/location-select.svg" alt="search-icon">
-					<input type="text" class="search-input" id="search-area" autocomplete="off" placeholder="Search for a city,place...">
-				</div>
-				<div class="result-box" id="area-result-box">
-					<ul>
-						<li></li>
-					</ul>
-				</div>
+	<main>
+		<div class="search-banner">
+			<div>
+				<h3> Discover and Book Top Sports Complexes in Chennai Online</h3>
 			</div>
-
 			
-			<div class="search-venue">
-				<div class="search-box">
-					<img class="search-icon" src="../assets/icons/book-page/search-icon.svg" alt="search-icon">
-					<input type="text"  class="search-input" id="search-venue" autocomplete="off" placeholder="Search venue name">
+				<div class="search-container">
+					<div class="search-city">
+						<div class="search-box">
+							<img class="search-icon" src="../assets/icons/book-page/location-select.svg" alt="search-icon">
+							<input type="text" class="search-input" id="search-area" autocomplete="off" placeholder="Search for a city,place...">
+						</div>
+						<div class="result-box" id="area-result-box">
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<div class="search-venue">
+						<div class="search-box">
+							<img class="search-icon" src="../assets/icons/book-page/search-icon.svg" alt="search-icon">
+							<input type="text"  class="search-input" id="search-venue" autocomplete="off" placeholder="Search venue name">
+						</div>
+						<div class="result-box" id="venue-result-box">
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<div class="multiselect">
+						<div class="select-box">All sports</div><img class="dropdown" src="../assets/icons/book-page/dropdown-arrow-svgrepo-com.svg" alt="">
+						<div class="options">
+							<label class="option"><input type="checkbox" value="Football"> Football</label>
+							<label class="option"><input type="checkbox" value="Basketball"> Basketball</label>
+							<label class="option"><input type="checkbox" value="Tennis"> Tennis</label>
+							<label class="option"><input type="checkbox" value="Swimming"> Swimming</label>
+							<label class="option"><input type="checkbox" value="Athletics"> Athletics</label>
+						</div>
+					</div>
 				</div>
-				<div class="result-box" id="venue-result-box">
-					<ul>
-						<li></li>
-					</ul>
-				</div>
-			</div>
-			<div class="multiselect">
-				<div class="select-box">All sports</div><img class="dropdown" src="../assets/icons/book-page/dropdown-arrow-svgrepo-com.svg" alt="">
-				<div class="options">
-					<label class="option"><input type="checkbox" value="Football"> Football</label>
-					<label class="option"><input type="checkbox" value="Basketball"> Basketball</label>
-					<label class="option"><input type="checkbox" value="Tennis"> Tennis</label>
-					<label class="option"><input type="checkbox" value="Swimming"> Swimming</label>
-					<label class="option"><input type="checkbox" value="Athletics"> Athletics</label>
-				</div>
-			</div>
+				
+			
+			
 		</div>
-	</div>
+		<div class="turf-list-wrapper">
+			<div class="turf-card">
+				<div class="turf-image">
+
+				</div>
+				<div class="turf-detail">
+					
+				</div>
+			</div>
+			
+		</div>
+	</main>
 	<footer class="footer-wrapper">
 		<div class="footer-column">
 			<svg
@@ -349,5 +364,6 @@
 	</div>
 	<script type="module" src="../js/components/multiSelectDropdown.js"></script>
 	<script type="module" src="../js/components/areaSearchFilter.js"></script>
+	<script src="../js/root.js"></script>
 </body>
 </html>
