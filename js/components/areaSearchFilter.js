@@ -1,8 +1,9 @@
-import { state } from "./data.js";
+import { state } from "../data/cityStates.js";
 
 let availableKeywords = [];
         Object.entries(state).forEach(([key, value]) => {
             value.forEach((city) => {
+
                 availableKeywords.push("<span class='city'>"+ city +"</span>"+" "+"<span class='state'>"+ key +"</span>");
             });
         });
@@ -37,6 +38,8 @@ let availableKeywords = [];
             listItems.forEach(item => {
                 item.addEventListener('click', function() {
                     Input_box.value = this.textContent.replace(" ", ", ");
+                    let displayCity = this.textContent.slice(0, this.textContent.indexOf(" "));
+                    document.getElementById("city").innerHTML = displayCity;
                     Result_box.style.display = 'none';
                 });
             });

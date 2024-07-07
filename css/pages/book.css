@@ -1,128 +1,139 @@
-.search-banner{
-    display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
-	background-color: var(--c-gray-200);
-    user-select: none;
+.search-banner {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--c-gray-200);
+  user-select: none;
 }
 
-.search-container{
-    display: flex;
+.search-container {
+  display:flex;
+  margin: 10px auto;
 }
-.search-city,.search-venue,.multiselect{
-    width: 320px; 
-    position: relative;
+.search-city,
+.search-venue,
+.multiselect {
+  width: 320px;
+  position: relative;
 }
 
 .select-box {
-    cursor: pointer;
-    padding:10px 14px 10px 10px ;
-    font-size: var(--f-16);
-    border:1px solid var(--c-gray-300);
-    border-radius: 0.5rem;
-    background-color: var(--c-white);
+  cursor: pointer;
+  padding: 10px 14px 10px 10px;
+  font-size: var(--f-16);
+  border: 1px solid var(--c-gray-300);
+  border-radius: 0.5rem;
+  background-color: var(--c-white);
 }
-.search-icon{
-    position: absolute;
-    left: 15px;
-    top: 14px;
-    width: 17px;
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  width: 17px;
 }
-.dropdown{
-
-    position: absolute;
-    width: 20px;
-    right: 15px;
-    top: 12px;
-    transform: rotate(0deg);
-    transition: transform .5s;
+.dropdown {
+  position: absolute;
+  width: 20px;
+  right: 15px;
+  top: 12px;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
 }
 .rotate {
-    transform: rotate(180deg);
-    
+  transform: rotate(180deg);
 }
 .search-input {
-    width: 300px;
-    padding:10px 10px 10px 40px ;
-    background-color:var(--c-white);
-    font-size: var(--f-16);
-    border:1px solid var(--c-gray-300);
-    border-radius: 0.5rem;
-    outline: none;
-    line-height: 1.5;
+  width: 300px;
+  padding: 10px 10px 10px 40px;
+  background-color: var(--c-white);
+  font-size: var(--f-16);
+  border: 1px solid var(--c-gray-300);
+  border-radius: 0.5rem;
+  outline: none;
+  line-height: 1.5;
 }
 .result-box {
-    position: absolute;
-    top: 105%;
-    margin-left:26px;
-    width: 85%;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius:5px;
-    border-top: none;
-    max-height: 261px;
-    overflow-y: auto;
-    display: none;
-    z-index: 20;
+  position: absolute;
+  top: 105%;
+  margin-left: 26px;
+  width: 85%;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border-top: none;
+  max-height: 261px;
+  overflow-y: auto;
+  display: none;
+  z-index: 20;
 }
 .result-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .result-box li {
-    width: 100%;
-    padding: 10px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
 }
 .result-box li:hover {
-    background: var(--c-gray-400);
-    color:var(--c-green);
+  background: var(--c-gray-400);
+  color: var(--c-green);
 }
-.result-box li .city{
-    display: block;
-    font-weight: 600;
+.result-box li .city {
+  display: block;
+  font-weight: 600;
 }
-.result-box li .state{
-    display: block;
-    font-size: 14px;
+.result-box li .state {
+  display: block;
+  font-size: 14px;
 }
 
+.options {
+  display: none; /* Set to 'none' initially */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  max-height: max-content;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.option {
+  display: block; /* Ensure each option is displayed as a block */
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: #f0f0f0;
+}
+.option input {
+  margin-right: 10px;
+  vertical-align: middle;
+}
 
-
-
-        
-        .options {
-            display: none; /* Set to 'none' initially */
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            border-radius:5px;
-            margin-top: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            background-color: white;
-            max-height: max-content;
-            overflow-y: auto;
-            z-index: 1000;
-        }
-        .option {
-            display: block; /* Ensure each option is displayed as a block */
-			color: #333;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .option:hover {
-			background-color: #f0f0f0;
-        }
-        .option input {
-			margin-right: 10px;
-            vertical-align: middle;
-        }
-.turf-list-wrapper{
-
+#turf-list-wrapper{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    gap: 50px;
+    margin: 80px auto;
+    width: 90%;
 }
 .turf-card{
-
+ background-color: var(--c-white);
+ border-bottom-left-radius: var(--br-10);
+ border-bottom-right-radius: var(--br-10);
 }
+.turf-image> img{
+    width: 100%;
+    border-top-left-radius: var(--br-10);
+    border-top-right-radius: var(--br-10);
+    object-fit: cover;
+}
+
