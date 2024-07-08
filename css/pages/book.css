@@ -122,18 +122,75 @@
     display: grid;
     grid-template-columns:1fr 1fr 1fr ;
     gap: 50px;
-    margin: 80px auto;
+    margin: 50px auto;
     width: 90%;
 }
 .turf-card{
- background-color: var(--c-white);
- border-bottom-left-radius: var(--br-10);
- border-bottom-right-radius: var(--br-10);
+  background-color: var(--c-white);
+  border-top-left-radius: var(--br-8);
+  border-top-right-radius: var(--br-8);
+  border-bottom-left-radius: var(--br-10);
+  border-bottom-right-radius: var(--br-10);
+  box-shadow: 0 4px 6px 0 #0000000d;
+  box-shadow: 0 10px 15px 0 #0000001a;
+
 }
-.turf-image> img{
+.turf-image{
+  position: relative;       
+  min-width: 390px;
+}
+.turf-image img{
     width: 100%;
-    border-top-left-radius: var(--br-10);
-    border-top-right-radius: var(--br-10);
+    height: 200px;
+    display: block;
+    border-top-left-radius: var(--br-8);
+    border-top-right-radius: var(--br-8);
     object-fit: cover;
 }
+.turf-image span{
+  position: absolute;
+  right: 0;
+  bottom:0;
+  padding: 10px 30px;
+  border-top-left-radius: var(--br-10);
+  background-color: var(--c-green);
+  color:var(--c-white);
+}
 
+.turf-detail{
+  padding: 20px;
+}
+.turf-detail :nth-child(1){
+  display: flex;
+  justify-content: space-between;
+}
+.turf-name{
+  font-weight: 600;
+}
+.turf-rating{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.turf-rating :nth-child(2){
+  font-weight: 600;
+}
+.turf-rating > img{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.turf-detail :nth-child(2){
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 2;
+}
+.turf-available-sports{
+  display:flex;
+  margin-top: 10px;
+  gap: 5px;
+}
+.turf-available-sports * {
+  width: 35px;
+}
