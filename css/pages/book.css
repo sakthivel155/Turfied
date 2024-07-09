@@ -120,7 +120,7 @@
 
 #turf-list-wrapper{
     display: grid;
-    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-columns:repeat(auto-fill,minmax(390px,1fr));
     gap: 50px;
     margin: 50px auto;
     width: 90%;
@@ -137,7 +137,6 @@
 }
 .turf-image{
   position: relative;       
-  min-width: 390px;
 }
 .turf-image img{
     width: 100%;
@@ -178,7 +177,7 @@
 .turf-rating > img{
   width: 20px;
   height: 20px;
-  object-fit: cover;
+  object-fit:cover;
 }
 .turf-detail :nth-child(2){
   display: flex;

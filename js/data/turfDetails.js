@@ -122,5 +122,28 @@ export const turfs = [
       alldays : "6AM - 10PM"
     },
   turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+},
+{
+  turf_id   : 5,
+  turf_name : "AUK Sports Zone",
+  turf_place: "Banagiri Nagara",
+  turf_area : "Bangalore",
+  turf_address: "Beside Apollo National Public School, 7 Block, Kathreguppe, Banashankari 3rd Stage, Banashankari, Bengaluru, Karnataka 560085",
+  turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
+  turf_contactno: "+91 9243564942",
+  turf_amenities: ["Parking","Drinking Water","Restroom"],
+  turf_sports: ["cricket","football","basketball"],
+  turf_imgurl1 : "https://playo.gumlet.io/AUKSPORTSZONE20240203093022107518/AUKSportsZone1706952610722.jpeg",
+  turf_distance: 6.8, //km
+  turf_avg_rating: 2.64, //rating 
+  turf_no_of_rating: 11, //no.of.rate
+  turf_openingHours: {
+      weekdays: "",
+      weekends: "",
+      alldays : "6AM - 10PM"
+    },
+  turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
 }
     ];
+
+    

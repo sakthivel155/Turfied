@@ -1,53 +1,41 @@
 import { state } from "../data/cityStates.js";
 
-let availableKeywords = [];
-        Object.entries(state).forEach(([key, value]) => {
-            value.forEach((city) => {
+const availableKeywords = Object.entries(state).flatMap(([key, value]) => 
+    value.map(city => `<span class='city'>${city}</span> <span class='state'>${key}</span>`)
+);
 
-                availableKeywords.push("<span class='city'>"+ city +"</span>"+" "+"<span class='state'>"+ key +"</span>");
+const Input_box = document.getElementById('search-area');
+const Result_box = document.getElementById('area-result-box');
+const resultList = Result_box.querySelector('ul');
+
+function display(result) {
+    if (result.length) {
+        resultList.innerHTML = result.map(item => `<li>${item}</li>`).join('');
+        Result_box.style.display = 'block';
+
+        resultList.querySelectorAll('li').forEach(item => {
+            item.addEventListener('click', function() {
+                Input_box.value = this.textContent.replace(" ", ", ");
+                let displayCity = this.textContent.slice(0, this.textContent.indexOf(" "));
+                document.getElementById("city").innerHTML = displayCity;
+                Result_box.style.display = 'none';
             });
         });
-        
-        let Input_box = document.getElementById('search-area');
-        let Result_box = document.getElementById('area-result-box');
+    } else {
+        Result_box.style.display = 'none';
+    }
+}
 
-        Input_box.onkeyup = function () {
-            let result = [];
-            let input = Input_box.value;
+Input_box.addEventListener('input', function() {
+    const input = this.value.toLowerCase();
+    const result = input.length ? availableKeywords.filter(keyword => 
+        keyword.toLowerCase().includes(input)
+    ) : [];
+    display(result);
+});
 
-            if (input.length) {
-                result = availableKeywords.filter((keyword) => {
-                    return keyword.toLowerCase().includes(input.toLowerCase());
-                });
-                Result_box.style.display = 'block';
-            } else {
-                Result_box.style.display = 'none';
-            }
-            display(result);
-        };
-
-        function display(result) {
-            let List = "";
-            result.forEach((list) => {
-                List += `<li>${list}</li>`;
-            });
-            Result_box.querySelector('ul').innerHTML = List;
-
-            // Add click event listeners to list items
-            let listItems = Result_box.querySelectorAll('li');
-            listItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    Input_box.value = this.textContent.replace(" ", ", ");
-                    let displayCity = this.textContent.slice(0, this.textContent.indexOf(" "));
-                    document.getElementById("city").innerHTML = displayCity;
-                    Result_box.style.display = 'none';
-                });
-            });
-        }
-
-        // Hide results when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!Result_box.contains(e.target) && e.target !== Input_box) {
-                Result_box.style.display = 'none';
-            }
-        });
+document.addEventListener('click', function(e) {
+    if (!Result_box.contains(e.target) && e.target !== Input_box) {
+        Result_box.style.display = 'none';
+    }
+});
