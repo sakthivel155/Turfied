@@ -1,30 +1,41 @@
+import { turfs } from "../data/turfDetails.js";
+import { displayCard } from "./framingTurf.js";
+
 const selectBox = document.querySelector('.select-box');
 const optionsContainer = document.querySelector('.options');
 const checkboxes = document.querySelectorAll('.option input');
 const dropdown = document.querySelector('.dropdown');
+
+// Array to store selected sports
+let selectedSports = ["allsports"];
+let filteredTurf = [];
 
 selectBox.addEventListener('click', () => {
     dropdown.classList.toggle('rotate');
     optionsContainer.style.display = optionsContainer.style.display === 'block' ? 'none' : 'block';
 });
 
-
 checkboxes.forEach(checkbox => {
     checkbox.addEventListener('change', updateSelectBox);
 });
 
 function updateSelectBox() {
-    const selectedOptions = Array.from(checkboxes)
+    selectedSports = Array.from(checkboxes)
         .filter(checkbox => checkbox.checked)
         .map(checkbox => checkbox.value);
-    
-    if (selectedOptions.length === 0) {
+
+    if (selectedSports.length === 0) {
+        selectedSports = ["allsports"];
         selectBox.textContent = 'All sports';
-    } else if (selectedOptions.length === checkboxes.length) {
+    } else if (selectedSports.length === checkboxes.length) {
+        selectedSports = ["allsports"];
         selectBox.textContent = 'All sports';
     } else {
-        selectBox.textContent = selectedOptions.join(', ');
+        selectBox.textContent = selectedSports.join(', ');
     }
+
+    // Filter turfs based on selected sports
+    filterTurf(selectedSports);
 }
 
 document.addEventListener('click', (e) => {
@@ -32,3 +43,19 @@ document.addEventListener('click', (e) => {
         optionsContainer.style.display = 'none';
     }
 });
+
+function filterTurf(selectedSports) {
+    if (selectedSports.includes("allsports")) {
+        filteredTurf = turfs;
+    } else {
+        filteredTurf = turfs.filter(turf => 
+            selectedSports.some(sport => 
+                turf.turf_sports.includes(sport)
+            )
+        );
+    }
+    displayCard(filteredTurf);
+}
+
+// Initial filtering
+filterTurf(selectedSports);

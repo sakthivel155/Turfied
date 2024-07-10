@@ -1,6 +1,6 @@
 import { turfs } from '../data/turfDetails.js';
 
-function displayCard(cards) {
+export function displayCard(cards) {
     const turfCardContainer = document.getElementById('turf-list-wrapper');
     turfCardContainer.innerHTML = cards.map(turfCard => `
         <div class="turf-card">
@@ -51,3 +51,4 @@ Input_venue.onkeyup = function() {
         displayCard(filteredTurfs);
     }
 };
+
