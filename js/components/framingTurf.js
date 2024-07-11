@@ -1,4 +1,9 @@
-import { turfs } from '../data/turfDetails.js';
+export let turfs=[];
+export function sortedTurf(filteredTurf){
+    turfs = filteredTurf;
+    displayCard(turfs);
+}
+
 
 export function displayCard(cards) {
     const turfCardContainer = document.getElementById('turf-list-wrapper');
@@ -28,10 +33,6 @@ export function displayCard(cards) {
         </div>
     `).join('');
 }
-
-displayCard(turfs);
-
-
 
 
 const Input_venue = document.getElementById('search-venue');

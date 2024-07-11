@@ -1,4 +1,5 @@
-import { turfs } from "../data/turfDetails.js";
+
+import { turfs } from "./framingTurf.js";
 import { displayCard } from "./framingTurf.js";
 
 const selectBox = document.querySelector('.select-box');

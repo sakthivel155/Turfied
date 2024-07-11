@@ -1,5 +1,6 @@
+import { turfs } from "../data/turfDetails.js";
 import { state } from "../data/cityStates.js";
-
+import { sortedTurf } from "./framingTurf.js";
 const availableKeywords = Object.entries(state).flatMap(([key, value]) => 
     value.map(city => `<span class='city'>${city}</span> <span class='state'>${key}</span>`)
 );
@@ -19,6 +20,7 @@ function display(result) {
                 let displayCity = this.textContent.slice(0, this.textContent.indexOf(" "));
                 document.getElementById("city").innerHTML = displayCity;
                 Result_box.style.display = 'none';
+                filterTurf(displayCity);
             });
         });
     } else {
@@ -39,3 +41,13 @@ document.addEventListener('click', function(e) {
         Result_box.style.display = 'none';
     }
 });
+
+
+function filterTurf(city){
+    const filteredTurfs = turfs.filter(turf => turf.turf_area.toLowerCase() === city.toLowerCase());
+    if (filteredTurfs.length > 0) {
+        sortedTurf(filteredTurfs);
+    } else {
+        console.log(`No turfs found for ${city}`);
+    }
+}
