@@ -17,6 +17,9 @@
   width: 320px;
   position: relative;
 }
+.search-city .select-box{
+  padding: 10px 14px 10px 10px;
+}
 
 .select-box {
   cursor: pointer;
@@ -26,11 +29,20 @@
   border-radius: 0.5rem;
   background-color: var(--c-white);
 }
+
 .search-icon {
   position: absolute;
   left: 15px;
   top: 14px;
   width: 17px;
+}
+.detect-location-icon{
+  position: absolute;
+  right: 30px;
+  top: 12px;
+}
+.detect-location-icon img{
+  display: block;
 }
 .dropdown {
   position: absolute;
@@ -45,7 +57,7 @@
 }
 .search-input {
   width: 300px;
-  padding: 10px 10px 10px 40px;
+  padding: 10px 36px 10px 40px;
   background-color: var(--c-white);
   font-size: var(--f-16);
   border: 1px solid var(--c-gray-300);
