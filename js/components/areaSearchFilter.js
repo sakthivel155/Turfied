@@ -59,63 +59,31 @@ function filterTurf(city) {
 document.addEventListener('DOMContentLoaded', () => { getGeolocation() });
 document.getElementById('detect-location-icon').addEventListener('click', () => { getGeolocation() });
 
-// function getGeolocation(){
-//     return new Promise((resolve, reject) => {
-//         if (navigator.geolocation) {
-//             navigator.geolocation.getCurrentPosition((position) => {
-//                 const latitude = position.coords.latitude;
-//                 const longitude = position.coords.longitude;
-
-//                 fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
-//                     .then(response => response.json())
-//                     .then(data => {
-//                         const district = data.address.county || data.address.district || 'N/A';
-//                         Input_box.value = district;
-//                         Input_box.dispatchEvent(new Event('input'));
-
-//                         // Check if there's a matching result and select it
-                       
-//                             const matchingItem = Array.from(resultList.querySelectorAll('li')).find(item =>
-//                                 item.textContent.toLowerCase().includes(district.toLowerCase())
-//                             );
-//                             if (matchingItem) {
-//                                 selectItem(matchingItem);
-//                             }
-                       
-
-//                         resolve(district);
-//                     })
-//                     .catch(error => {
-//                         console.error("Error getting location details:", error);
-//                         reject(error);
-//                     });
-//             }, (error) => {
-//                 console.error("Error getting location:", error);
-//                 reject(error);
-//             });
-//         } else {
-//             console.log("Geolocation is not supported by this browser.");
-//             reject("Geolocation not supported");
-//         }
-//     });
-// }
-    
-
-function getGeolocation() {
+function getGeolocation(){
     return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
-                
-                // Use reverse geocoding to get the address details
+
                 fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
                     .then(response => response.json())
                     .then(data => {
+
                         const district = data.address.county || data.address.district || 'N/A';
-                        console.log("Location (District):", district);
-                        // You can update your UI here, e.g.:
-                        // document.getElementById('locationResult').textContent = district;
+                        Input_box.value = district;
+                        Input_box.dispatchEvent(new Event('input'));
+  
+                        // Check if there's a matching result and select it
+                       
+                            const matchingItem = Array.from(resultList.querySelectorAll('li')).find(item =>
+                                item.textContent.toLowerCase().includes(district.toLowerCase())
+                            );
+                            if (matchingItem) {
+                                selectItem(matchingItem);
+                            }
+                       
+
                         resolve(district);
                     })
                     .catch(error => {
@@ -130,5 +98,8 @@ function getGeolocation() {
             console.log("Geolocation is not supported by this browser.");
             reject("Geolocation not supported");
         }
-    });
+    }); 
 }
+    
+
+
