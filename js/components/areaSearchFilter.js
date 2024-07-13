@@ -56,7 +56,7 @@ function filterTurf(city) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => { getGeolocation() });
+// document.addEventListener('DOMContentLoaded', () => { getGeolocation() });
 document.getElementById('detect-location-icon').addEventListener('click', () => { getGeolocation() });
 
 function getGeolocation(){
