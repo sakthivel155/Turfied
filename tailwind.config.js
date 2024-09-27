@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         'lite-gray': '#f1f3f2', //body background color
-        'primary-green': '#00b562',
+        'primary-green': '#059862',
         'primary-green-lite': '#037a43'
       },
     },
