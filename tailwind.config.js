@@ -9,7 +9,8 @@ export default {
       colors: {
         'lite-gray': '#f1f3f2', //body background color
         'primary-green': '#059862',
-        'primary-green-lite': '#037a43'
+        'primary-green-lite': '#037a43',
+        'filter-bar-gray' : '#e8eae9'
       },
     },
     screens: {

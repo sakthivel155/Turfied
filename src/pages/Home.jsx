@@ -14,7 +14,7 @@ function Home() {
             <div className="flex flex-col tablet:items-center tablet:flex-row tablet:justify-between laptop:max-w-[90%] laptop:m-auto">             
                 <div className="px-4 py-10 tablet:max-w-[40%] laptop:max-w-[30%]">
                     <h1 className="text-[1.4rem] font-black tablet:text-[1.5rem] laptop:text-[1.9rem]">FIND PLAYERS & VENUES NEARBY</h1>
-                    <p className="my-5 text-md laptop:text-lg">
+                    <p className="my-5 text-lg font-medium text-slate-500 laptop:text-lg">
                         Seamlessly explore sports venues and play with sports enthusiasts
                         just like you!
                     </p>
