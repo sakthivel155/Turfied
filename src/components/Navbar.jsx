@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from 'react';
 import logo from '../assets/app-logo.svg'
 import { IoMenu,IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom"
@@ -7,6 +7,19 @@ import { Link } from "react-router-dom"
 
 function Navbar() {
     const [menuBtn, setMenuBtn] = useState(false);
+    const wrapperRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+          if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+            setMenuBtn(false);
+          }
+        };
+    
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+      }, []);
+
 
     function handleMenuBtn() {
         setMenuBtn(!menuBtn)
@@ -17,7 +30,7 @@ function Navbar() {
     return classes.filter(Boolean).join(' ')
     }
     return (
-        <header className="sticky top-0 z-[20] bg-lite-gray shadow-md">
+        <header ref={wrapperRef} className="sticky top-0 z-[20] bg-lite-gray shadow-md">
             <div className=" relative flex justify-between items-center px-4 py-4 laptop:max-w-[90%] laptop:mx-auto">
                 <img src={logo} alt="" className="w-28" />
                 <nav className={classNames("absolute top-[70px] left-0 w-full text-center bg-lite-gray shadow-lg rounded-b-2xl laptop:flex laptop:relative laptop:top-0 laptop:rounded-none laptop:bg-lite-gray laptop:shadow-none ", !menuBtn && 'hidden')}> 
