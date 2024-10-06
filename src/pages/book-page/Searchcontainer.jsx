@@ -7,39 +7,33 @@ import StateCitySelectCard from './StateCitySelectCard';
 import { turfs } from '../../data/turfDetails';
 import { state } from '../../data/cityStates'
 
-const SearchContainer = ({ setFilteredTurfs }) => {
+const SearchContainer = ({displayTurfs, setDisplayTurfs }) => {
+  const [cityNameInput, setCityNameInput] = useState('');
   const [venueNameInput, setVenueNameInput] = useState('');
-  const [locationInput, setLocationInput] = useState('');
-  const [filteredLocations, setFilteredLocations] = useState([]);
-  const [itemShow, setItemShow] =useState(true)
+
+  useEffect(() => {
+    dropDownCityFilter(cityNameInput);
+  }, [cityNameInput]);
+
   useEffect(() => {
     searchVenue(venueNameInput)
   }, [venueNameInput]);
 
-  useEffect(() => {
-    filterLocations(locationInput);
-    
-  }, [locationInput]);
 
-  function searchVenue(searchTerm) {
-    if (searchTerm === "") {
-      setFilteredTurfs(turfs);
-    } else if (searchTerm.length >= 3) {
-      const filteredTurfs = turfs.filter(turf =>
-        turf.turf_name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredTurfs(filteredTurfs);
-    }
-  }
 
-  function filterLocations(searchTerm) {
-    if (searchTerm === "") {
+  const [filteredTurfs, setFilteredLocations] = useState([]);
+
+  const [itemShow, setItemShow] =useState(true) //hidden when select finnaly city
+  
+
+  function dropDownCityFilter(textInput) {
+    if (textInput === "") {
       setFilteredLocations([]);
+      setDisplayTurfs(turfs);
     } else {
       const filtered = Object.entries(state).reduce((acc, [stateName, cities]) => {
         const filteredCities = cities.filter(city =>
-          city.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          stateName.toLowerCase().includes(searchTerm.toLowerCase())
+          city.toLowerCase().includes(textInput.toLowerCase()) 
         );
         if (filteredCities.length > 0) {
           acc.push([stateName, filteredCities]);
@@ -54,10 +48,30 @@ const SearchContainer = ({ setFilteredTurfs }) => {
       }
     }
   }
+  //city search is completed next section is find venues name section function create new state for store city turfs because when the venue input empty then show venues cites update
+  function searchVenue(textInput) {
+    if (textInput === "") {
+      setDisplayTurfs(displayTurfs); //continue here
+    } else if (textInput.length >= 2) {
+      const finnalTurfs = displayTurfs.filter(turf =>
+        turf.turf_name.toLowerCase().includes(textInput.toLowerCase())
+      );
+      setDisplayTurfs(finnalTurfs);
+    }
+  }
+
+  function filterTurf(city) {
+    const displayTurfs = turfs.filter(turf => turf.turf_area.toLowerCase() === city.toLowerCase());
+    if (displayTurfs.length > 0) {
+      setDisplayTurfs(displayTurfs);
+    } else {
+        console.log(`No turfs found for ${city}`);
+    }
+  }
 
   return (
     <div className="w-[90%] mx-auto flex flex-col gap-3 laptop:flex-row laptop:h-12 laptop:justify-end">
-      <div className='relative w-80'>
+      <div className='relative laptop:w-80'>
         <div className="flex items-center bg-white gap-3 p-3 border border-slate-400 rounded-lg">
           <img className="w-5 h-5" src={locationIcon} alt="location-icon" />
           <input
@@ -66,23 +80,24 @@ const SearchContainer = ({ setFilteredTurfs }) => {
             id="search-area"
             autoComplete="off"
             placeholder="Search for a city, place..."
-            value={locationInput}
+            value={cityNameInput}
             onChange={(e) => {
-              setLocationInput(e.target.value)
-              setItemShow(true)
+              setCityNameInput(e.target.value)
+              setItemShow(true) //if any modify happen then state city show until click 
             }}
           />
         </div>
-        { itemShow && locationInput && (
+        { itemShow && cityNameInput && (
           <ul className='absolute z-10 bg-white w-full top-11 border border-slate-400 rounded-lg border-t-0 rounded-t-none max-h-[277px] overflow-auto'>
-            {filteredLocations.flatMap(([stateName, cities], stateIndex) =>
+            {filteredTurfs.flatMap(([stateName, cities], stateIndex) =>
               cities.map((city, cityIndex) => (
                 <StateCitySelectCard
                   key={`${stateIndex}-${cityIndex}`}
                   city={city}
                   state={stateName}
                   onClick={(city, state) => {
-                    setLocationInput(`${city} ,${state}`) 
+                    setCityNameInput(`${city} ,${state}`) 
+                    filterTurf(city)
                     setItemShow(!itemShow)
                   }
                   
@@ -99,12 +114,13 @@ const SearchContainer = ({ setFilteredTurfs }) => {
           type="text"
           className="w-full outline-none"
           autoComplete="off"
+          name='searchVenue'
           placeholder="Search venue name"
           value={venueNameInput}
           onChange={(e) => setVenueNameInput(e.target.value)}
         />
       </div>
-      <MultiSelect setFilteredTurfs={setFilteredTurfs} />
+      <MultiSelect setDisplayTurfs={setDisplayTurfs} />
     </div>
   );
 };

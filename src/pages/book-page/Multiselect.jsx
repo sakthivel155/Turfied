@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import dropDownArrow from '../../assets/icons/book-page/dropdown-arrow-svgrepo-com.svg';
 import { turfs } from '../../data/turfDetails';
-const MultiSelect = ({setFilteredTurfs}) => {
+const MultiSelect = ({setDisplayTurfs}) => {
   const sports = [
     { value: 'football', label: 'Football' },
     { value: 'basketball', label: 'Basketball' },
@@ -36,7 +36,7 @@ const MultiSelect = ({setFilteredTurfs}) => {
 
     setSelectedSports(newSelectedSports);
     const newFilteredTurfs = filterTurfsBySports(newSelectedSports);
-    setFilteredTurfs(newFilteredTurfs);
+    setDisplayTurfs(newFilteredTurfs);
   };
 
   return (
