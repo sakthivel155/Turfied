@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import dropDownArrow from '../../assets/icons/book-page/dropdown-arrow-svgrepo-com.svg';
-import { turfs } from '../../data/turfDetails';
-const MultiSelect = ({setDisplayTurfs}) => {
+
+const MultiSelect = ({storeFilteredTurfsForSearchVenues ,setDisplayTurfs}) => {
   const sports = [
     { value: 'football', label: 'Football' },
     { value: 'basketball', label: 'Basketball' },
@@ -25,7 +25,7 @@ const MultiSelect = ({setDisplayTurfs}) => {
   }, []);
 
   function filterTurfsBySports(selectedSports) {
-    return turfs.filter(turf => 
+    return storeFilteredTurfsForSearchVenues.filter(turf => 
       selectedSports.length === 0 || selectedSports.some(sport => turf.turf_sports.includes(sport))
     );
   }

@@ -1,12 +1,11 @@
 import SearchContainer from "./book-page/Searchcontainer"
 import Footer from '../components/Footer'
-import { turfs } from "../data/turfDetails";
 import { TurfCard } from "./book-page/TurfCard";
 import { useState } from "react";
 
 
 function Book() {
-    const [displayTurfs, setDisplayTurfs] = useState(turfs);
+    const [displayTurfs, setDisplayTurfs] = useState([]);
 
 
     return (
@@ -16,7 +15,7 @@ function Book() {
                     <h2 className="font-semibold  max-w-[225px] text-center mx-auto py-3 tablet:py-3 tablet:mx-3 laptop:text-left">Discover and Book Top Sports venues in Chennai Online</h2>
             <SearchContainer displayTurfs={displayTurfs} setDisplayTurfs={setDisplayTurfs} />
                 </div>
-                <div className="grid gap-5 w-[95%] mx-auto my-3 tablet:grid-cols-[repeat(auto-fill,minmax(390px,1fr))] laptop:w-[95%] laptop:my-10 laptop:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] ">
+                <div className="grid gap-5 w-[90%] mx-auto my-3 tablet:grid-cols-[repeat(auto-fill,minmax(390px,1fr))] laptop:w-[95%] laptop:my-10 laptop:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] ">
                     {displayTurfs.map((turf,id=id+1) => {
                         return(
                         <TurfCard

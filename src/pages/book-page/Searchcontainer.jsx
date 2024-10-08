@@ -7,7 +7,7 @@ import StateCitySelectCard from './StateCitySelectCard';
 import { turfs } from '../../data/turfDetails';
 import { state } from '../../data/cityStates'
 
-const SearchContainer = ({displayTurfs, setDisplayTurfs }) => {
+const SearchContainer = ({setDisplayTurfs }) => {
   const [cityNameInput, setCityNameInput] = useState('');
   const [venueNameInput, setVenueNameInput] = useState('');
 
@@ -21,15 +21,17 @@ const SearchContainer = ({displayTurfs, setDisplayTurfs }) => {
 
 
 
-  const [filteredTurfs, setFilteredLocations] = useState([]);
+  const [filteredTurfs, setFilteredLocations] = useState([]); //filter the control City-state 
+  const [storeFilteredTurfsForSearchVenues, setStoreFilteredTurfsForSearchVenues] = useState(turfs); //control the venue-state
 
   const [itemShow, setItemShow] =useState(true) //hidden when select finnaly city
   
 
   function dropDownCityFilter(textInput) {
     if (textInput === "") {
-      setFilteredLocations([]);
       setDisplayTurfs(turfs);
+      setStoreFilteredTurfsForSearchVenues(turfs)
+      setVenueNameInput('')
     } else {
       const filtered = Object.entries(state).reduce((acc, [stateName, cities]) => {
         const filteredCities = cities.filter(city =>
@@ -48,12 +50,14 @@ const SearchContainer = ({displayTurfs, setDisplayTurfs }) => {
       }
     }
   }
-  //city search is completed next section is find venues name section function create new state for store city turfs because when the venue input empty then show venues cites update
+  
   function searchVenue(textInput) {
     if (textInput === "") {
-      setDisplayTurfs(displayTurfs); //continue here
-    } else if (textInput.length >= 2) {
-      const finnalTurfs = displayTurfs.filter(turf =>
+      setDisplayTurfs(storeFilteredTurfsForSearchVenues); //continue here
+    }else if (textInput === "" && cityNameInput === ""){
+      setDisplayTurfs(turfs)
+    }else if (textInput.length >= 2) {
+      const finnalTurfs = storeFilteredTurfsForSearchVenues.filter(turf =>
         turf.turf_name.toLowerCase().includes(textInput.toLowerCase())
       );
       setDisplayTurfs(finnalTurfs);
@@ -63,6 +67,7 @@ const SearchContainer = ({displayTurfs, setDisplayTurfs }) => {
   function filterTurf(city) {
     const displayTurfs = turfs.filter(turf => turf.turf_area.toLowerCase() === city.toLowerCase());
     if (displayTurfs.length > 0) {
+      setStoreFilteredTurfsForSearchVenues(displayTurfs)
       setDisplayTurfs(displayTurfs);
     } else {
         console.log(`No turfs found for ${city}`);
@@ -120,7 +125,7 @@ const SearchContainer = ({displayTurfs, setDisplayTurfs }) => {
           onChange={(e) => setVenueNameInput(e.target.value)}
         />
       </div>
-      <MultiSelect setDisplayTurfs={setDisplayTurfs} />
+      <MultiSelect storeFilteredTurfsForSearchVenues={storeFilteredTurfsForSearchVenues} setDisplayTurfs={setDisplayTurfs} />
     </div>
   );
 };
