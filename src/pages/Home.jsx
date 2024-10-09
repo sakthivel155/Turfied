@@ -2,7 +2,8 @@ import Footer from "../components/Footer"
 import { Link } from "react-router-dom"
 import Sportcard from "../components/ui/Sportcard"
 import Featurecard from "../components/ui/Featurecard"
-import { landingPageImage , appFeature , popularSportData } from "../data/imgLocalUrl"
+import { landingPageImage, appFeature, popularSportData } from "../data/imgLocalUrl"
+import offerCard from '../assets/images/offerCard.svg'
 function Home() {
 
 
@@ -49,16 +50,23 @@ function Home() {
                 </section>
                 <section className="bg-white m-5 px-5 py-4 rounded-xl laptop:max-w-[90%] laptop:m-auto">
                 <h2 className='font-semibold laptop:text-xl'>Popular Sports</h2>
-                <div className="py-2 grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,100px),1fr))] ">
+                <div className="py-5 grid grid-cols-2 gap-4 mobile:grid-cols-3 tablet:grid-cols-6 ">
                         {popularSportData.map((item,key=0) => <Sportcard key={key+1} sportName = {item.sportName} imgUrl={item.url} />)}
                 </div>
                 </section>
-                <section className="bg-white m-4 p-4 rounded-xl laptop:max-w-[90%] laptop:mx-auto ">
-                <h2 className='font-semibold laptop:text-xl'>Your one-stop platform for sports</h2>
-                <div className="grid tablet:grid-cols-2 ">
-                    {appFeature.map((item,key=0) => <Featurecard key={key+1} imgUrl={item.imgUrl} appFeature = {item.content} />)}
-                </div>
-                </section>
+                <div className="flex gap-5 flex-col tablet:flex-row max-w-[90%] mx-auto tablet:my-5">
+                    <section className="flex flex-col justify-between gap-5">
+                        <img src={offerCard} alt="" className="w-full" />
+                        <img src={offerCard} alt="" className="w-full hidden tablet:block" />               
+                        <img src={offerCard} alt="" className="w-full hidden tablet:block laptop:hidden "  />   
+                    </section>
+                    <section className="bg-white  p-4 rounded-xl w-full">
+                        <h2 className='font-semibold laptop:text-xl'>Your one-stop platform for sports</h2>
+                    <div className="grid laptop:grid-cols-2 cols-gap ">
+                        {appFeature.map((item,key=0) => <Featurecard key={key+1} imgUrl={item.imgUrl} appFeature = {item.content} />)}
+                        </div>     
+                    </section>
+                    </div>
             </main>
             <Footer />
         </>

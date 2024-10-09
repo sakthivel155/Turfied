@@ -62,6 +62,13 @@ export const appFeature = [
     {
         imgUrl: manageSports,
         content : 'Manage your sports activities & groups'
+    },  {
+        imgUrl: playWithPlayer,
+        content : 'Play with players around you'
     },
+    {
+        imgUrl: bookSportsVenues,
+        content : 'Book sports venues nearby'
+    }
 
 ]
