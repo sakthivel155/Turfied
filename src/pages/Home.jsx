@@ -4,6 +4,7 @@ import Sportcard from "../components/ui/Sportcard"
 import Featurecard from "../components/ui/Featurecard"
 import { landingPageImage, appFeature, popularSportData } from "../data/imgLocalUrl"
 import offerCard from '../assets/images/offerCard.svg'
+import sideOfferCard from '../assets/images/offerCard.png'
 function Home() {
 
 
@@ -54,15 +55,14 @@ function Home() {
                         {popularSportData.map((item,key=0) => <Sportcard key={key+1} sportName = {item.sportName} imgUrl={item.url} />)}
                 </div>
                 </section>
-                <div className="flex gap-5 flex-col tablet:flex-row max-w-[90%] mx-auto tablet:my-5">
-                    <section className="flex flex-col justify-between gap-5">
-                        <img src={offerCard} alt="" className="w-full" />
-                        <img src={offerCard} alt="" className="w-full hidden tablet:block" />               
-                        <img src={offerCard} alt="" className="w-full hidden tablet:block laptop:hidden "  />   
+                <div className="grid gap-5 tablet:grid-cols-2 max-w-[90%] mx-auto tablet:my-5">
+                    <section className="flex flex-col justify-between gap-5 ">
+                        <img src={sideOfferCard} alt=""  className="hidden tablet:block laptop:hidden rounded-xl"/>
+                        <img src={offerCard} alt="" className="w-full h-[100%] object-contain tablet:hidden laptop:block" />
                     </section>
                     <section className="bg-white  p-4 rounded-xl w-full">
                         <h2 className='font-semibold laptop:text-xl'>Your one-stop platform for sports</h2>
-                    <div className="grid laptop:grid-cols-2 cols-gap ">
+                    <div className="grid laptop:grid-cols-2  ">
                         {appFeature.map((item,key=0) => <Featurecard key={key+1} imgUrl={item.imgUrl} appFeature = {item.content} />)}
                         </div>     
                     </section>
