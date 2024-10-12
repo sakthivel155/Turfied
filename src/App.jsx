@@ -4,7 +4,6 @@ import Play from './pages/Play'
 import Book from './pages/Book'
 import Learn from './pages/Learn'
 import Login from './pages/Login'
-import Signup from './pages/Signup'
 import NotFound from './pages/NotFound'
 import './App.css'
 
@@ -23,7 +22,6 @@ function App() {
             <Route path='/Book' element={<Book />} />
             <Route path='/Learn' element={<Learn />} />
             <Route path='/Login' element={<Login />} />
-            <Route path='/Signup' element={<Signup />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -12,7 +12,7 @@ function Book() {
         <>
             <main>
                 <div className="bg-filter-bar-gray pb-3 tablet:flex tablet:flex-col laptop:pb-0 tablet:items-center laptop:tablet:flex-row laptop:px-5">
-                    <h2 className="font-semibold  max-w-[225px] text-center mx-auto py-3 tablet:py-3 tablet:mx-3 laptop:text-left">Discover and Book Top Sports venues in Chennai Online</h2>
+                    <h2 className="font-black  max-w-[225px] text-center mx-auto py-3 tablet:py-3 tablet:mx-3 laptop:text-left">Discover and Book Top Sports venues in Chennai Online</h2>
             <SearchContainer displayTurfs={displayTurfs} setDisplayTurfs={setDisplayTurfs} />
                 </div>
                 <div className="grid gap-5 w-[90%] mx-auto my-3 tablet:grid-cols-[repeat(auto-fill,minmax(390px,1fr))] laptop:w-[95%] laptop:my-10 laptop:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] ">

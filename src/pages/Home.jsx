@@ -14,13 +14,13 @@ function Home() {
             <main>
                 <section className='bg-white mb-5 rounded-b-2xl laptop:py-10 '>
             <div className="flex flex-col tablet:items-center tablet:flex-row tablet:justify-between laptop:max-w-[90%] laptop:m-auto">             
-                <div className="px-4 py-10 tablet:max-w-[40%] laptop:max-w-[30%]">
+                <div className="px-4 pt-5 tablet:py-5 tablet:max-w-[40%] laptop:max-w-[30%]">
                     <h1 className="text-[1.4rem] font-black tablet:text-[1.5rem] laptop:text-[1.9rem]">FIND PLAYERS & VENUES NEARBY</h1>
                     <p className="my-5 text-lg font-medium text-slate-500 laptop:text-lg">
                         Seamlessly explore sports venues and play with sports enthusiasts
                         just like you!
                     </p>
-                    <div>
+                    <div className="hidden tablet:block">
                                 <button className="px-5 py-2 bg-primary-green font-medium text-lg text-white rounded-lg transition-colors duration-300 active:bg-primary-green-lite outline-none">
                                     <Link to={'/Book'} >Book now</Link>
                                 </button>
