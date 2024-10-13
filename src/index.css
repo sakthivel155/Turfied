@@ -23,3 +23,37 @@ body{
 h1{
     font-family: figtree-black;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+.top-down-slide-enter {
+    opacity: 0;
+    transform: translateY(-100%); /* Start off-screen at the top */
+  }
+  
+  .top-down-slide-enter-active {
+    opacity: 1;
+    transform: translateY(0); /* Animate to the top of the screen */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Set animation duration and timing function */
+  }
+
+
+
+
+  .bottom-up-slide-enter {
+    opacity: 0;
+    transform: translateY(100%); /* Start off-screen at the bottom */
+  }
+  
+  .bottom-up-slide-enter-active {
+    opacity: 1;
+    transform: translateY(0); /* Animate to the bottom of the screen */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Set animation duration and timing function */
+  }
