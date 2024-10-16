@@ -1,18 +1,26 @@
-import  { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import PropTypes from 'prop-types';
+import OtpInput from "../components/ui/OtpInput";
+
+import { auth } from "../services/firebase.config";
+import { RecaptchaVerifier,signInWithPhoneNumber } from 'firebase/auth'
+
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 function Login({ onClose }) {
-    const [countryCode, setCountryCode] = useState("+91");
-    const [mobileNo, setMobileNo] = useState("");
+    const [phoneNo, setPhoneNo] = useState("");
+    const [showOtpInput, setShowOtpInput] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const mobileInputRef = useRef(null);
+    
+    const phoneInputRef = useRef(null);
     const loginFormRef = useRef(null);
 
     useEffect(() => {
-        if (mobileInputRef.current) {
-            mobileInputRef.current.focus();
+        if (phoneInputRef.current) {
+            phoneInputRef.current.focus();
         }
         const timer = setTimeout(() => setIsVisible(true), 100);
         
@@ -28,57 +36,144 @@ function Login({ onClose }) {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [onClose]);
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add your form submission logic here
+    
+    const handlePhoneInputClick = (event) => {
+        // Prevent the click event from propagating to the document
+        event.stopPropagation();
+        if (phoneInputRef.current) {
+            phoneInputRef.current.focus();
+        }
     };
+
+    function onCaptchaVerify() {
+        if (!window.recaptchaVerifier) {
+            window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
+                'size': 'invisible',
+                'callback': (response) => {
+                  // reCAPTCHA solved, allow signInWithPhoneNumber.
+                handleSubmit()
+                },
+                'expired-callback': () => {
+                  // Response expired. Ask user to solve reCAPTCHA again.
+                  // ...
+                }
+            });
+        }
+    }
+
+    const handleSubmit = () => {
+    
+        const regex = /[^0-9]/g;
+        if (phoneNo.length < 10 || regex.test(phoneNo) ) {
+            alert("Invalid phone number");
+            return;
+        }
+        onCaptchaVerify();
+        const appVerifier = window.recaptchaVerifier
+        const formatPhoneNumber = '+' + phoneNo
+        console.log(auth, formatPhoneNumber, appVerifier)
+        signInWithPhoneNumber(auth, formatPhoneNumber, appVerifier)
+    .then((confirmationResult) => {
+      // SMS sent. Prompt user to type the code from the message, then sign the
+        // user in with confirmationResult.confirm(code).
+        window.confirmationResult = confirmationResult;
+        setShowOtpInput(true) // show otp
+        alert("OTP sended successfully")
+    
+    }).catch((error) => {
+        console.log(error)
+        console.log('hii')
+    });
+        
+    };
+
+    const onOtpSubmit = (otp) => {
+        console.log("Successfully logged in", otp);
+        // OTP Validation logic here
+    };
+
 
     return (
         <div className="fixed inset-0 z-50 flex items-start justify-end tablet:pr-10 bg-black bg-opacity-50">
-            <div 
+            <div
                 ref={loginFormRef}
                 className={`relative w-full bg-white shadow-lg transform 
-                    ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'} 
-                    transition-all duration-300 ease-out
-                    h-screen tablet:h-auto tablet:max-w-md tablet:rounded-lg tablet:mt-20 laptop:mt-24 laptop:w-96    
-                    ${isVisible ? 'top-down-slide-enter-active' : 'top-down-slide-enter'}`}
+                ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'} 
+                transition-all duration-300 ease-out
+                h-screen tablet:h-auto tablet:w-96 tablet:rounded-lg tablet:mt-20 laptop:w-96    
+                ${isVisible ? 'top-down-slide-enter-active' : 'top-down-slide-enter'}`}
             >
-                <button 
+                <button
                     onClick={onClose}
-                    className="absolute top-4 left-4 text-gray-600 hover:text-gray-800 laptop:hidden"
+                    className="absolute top-8 left-5 text-gray-600 hover:text-gray-800 tablet:hidden"
                     aria-label="Close"
                 >
                     <FaArrowLeft className="text-xl" />
                 </button>
                 <div className="px-8 py-12 h-full overflow-y-auto">
-                    <h2 className="font-black text-3xl mb-8">Get Started with Turfied</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className="flex border-2 p-3 outline-none gap-2 text-lg rounded-lg mb-4">
-                            <input
-                                type="text"
-                                name="countryCode"
-                                id="countryCode"
-                                value={countryCode}
-                                onChange={(e) => setCountryCode(e.target.value)}
-                                className="w-[35px] outline-none font-semibold"
-                            />
-                            <div className="text-[#8e8e8e]">|</div>
-                            <input
-                                type="tel"
-                                name="phoneNumber"
-                                id="phoneNumber"
-                                value={mobileNo}
-                                onChange={(e) => setMobileNo(e.target.value)}
-                                className="w-full outline-none placeholder:text-[1rem] placeholder:font-normal font-semibold"
-                                placeholder="Enter mobile number"
-                                ref={mobileInputRef}
-                            />
+                    <h2 className="font-black text-[2rem] my-10 w-[94%] tablet:mt-0">Get Started with Turfied</h2>
+                    {!showOtpInput ? (
+                        <div >
+                            <div onClick={handlePhoneInputClick}>
+                                <PhoneInput
+                                    country={'in'}
+                                    value={phoneNo}
+                                    onChange={(phone) => {
+                                        setPhoneNo(phone)
+                                        if (phoneInputRef.current) {
+                                            phoneInputRef.current.focus()
+                                        }
+                                    }}
+                                    placeholder={"Enter mobile number"}
+                                    inputProps={{
+                                        ref: phoneInputRef,
+                                        required: true,
+                                        autoFocus: true
+                                    }}
+                                    containerStyle={{
+                                        width: '100%',
+                                        marginBottom:'20px'
+                                    }}
+                                    inputStyle={{
+                                        width: '100%',
+                                        height: '40px',
+                                        paddingLeft: '42px',
+                                        borderRadius: '5px',
+                                        border: '1px solid #e2e8f0',
+                                        backgroundColor: '#f8fafc',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    buttonStyle={{
+                                        width: '100%',
+                                        Left:'8px',
+                                        backgroundColor: 'transparent',
+                                        border: 'none',
+                                        borderRight: '1px solid #e2e8f0',
+                                        borderTopLeftRadius: '8px',
+                                        borderBottomLeftRadius: '8px',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    dropdownStyle={{
+                                        width: '100%',
+                                        padding:'8px',
+                                        borderRadius: '5px',
+                                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                                        border: '1px solid #e2e8f0'
+                                    }}
+                                />
+                            </div>
+                            <div id="recaptcha-container"></div>
+                            <button onClick={handleSubmit} type="submit" className="font-semibold text-white bg-[#1AB65C] w-full py-3 rounded-md mb-6 hover:bg-[#159c4d] transition-colors duration-200">
+                                Continue
+                            </button>
                         </div>
-                        <button type="submit" className="font-semibold text-white bg-[#1AB65C] w-full py-3 rounded-md mb-6 hover:bg-[#159c4d] transition-colors duration-200">
-                            Continue
-                        </button>
-                    </form>
+                    ) : (
+                        <div className="mt-5">
+                            <p className="font-semibold text-center">Enter OTP sent to {phoneNo}</p>
+                            <OtpInput length={4} onOtpSubmit={onOtpSubmit} />
+                        </div>
+                    )}
+
                     <div className="flex items-center mb-6">
                         <div className="flex-grow h-px bg-gray-300"></div>
                         <span className="px-4 text-sm text-gray-500">OR</span>
