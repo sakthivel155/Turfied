@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import locationIcon from '../../assets/icons/book-page/location-select.svg';
+import  geoLocationIcon from '../../assets/icons/book-page/detect-location-icon.svg';
 import searchIcon from '../../assets/icons/book-page/search-icon.svg';
 
 import MultiSelect from './Multiselect';
@@ -7,10 +8,12 @@ import StateCitySelectCard from './StateCitySelectCard';
 import { turfs } from '../../data/turfDetails';
 import { state } from '../../data/cityStates'
 
-const SearchContainer = ({setDisplayTurfs }) => {
+const SearchContainer = ({setDisplayTurfs,setCurrentCity}) => {
   const [cityNameInput, setCityNameInput] = useState('');
   const [venueNameInput, setVenueNameInput] = useState('');
 
+
+  
   useEffect(() => {
     dropDownCityFilter(cityNameInput);
   }, [cityNameInput]);
@@ -28,16 +31,22 @@ const SearchContainer = ({setDisplayTurfs }) => {
   
 
   function dropDownCityFilter(textInput) {
+    if (textInput.includes(',')) {
+      textInput = textInput.split(',')[0].trim();
+    }
     if (textInput === "") {
       setDisplayTurfs(turfs);
       setStoreFilteredTurfsForSearchVenues(turfs)
       setVenueNameInput('')
-    } else {
+    }else{
       const filtered = Object.entries(state).reduce((acc, [stateName, cities]) => {
         const filteredCities = cities.filter(city =>
           city.toLowerCase().includes(textInput.toLowerCase()) 
         );
-        if (filteredCities.length > 0) {
+        if (textInput === filteredCities[0]) { 
+          filterTurf(textInput)
+          setItemShow(!itemShow)
+        } else if(filteredCities.length > 0) {
           acc.push([stateName, filteredCities]);
         }
         return acc;
@@ -74,6 +83,43 @@ const SearchContainer = ({setDisplayTurfs }) => {
     }
   }
 
+
+  function getGeolocation() {
+    
+    return new Promise((resolve, reject) => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+            
+                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+                    .then(response => response.json())
+                    .then(data => {
+      
+                      const district = data.address.county || data.address.district || 'N/A'
+                      const state = data.address.state || 'N/A'
+                    
+          
+                      setCityNameInput(`${district}, ${state}`)
+                      resolve(district);
+                  
+                    })
+                    .catch(error => {
+                        console.error("Error getting location details:", error);
+                        reject(error);
+                    });
+            }, (error) => {
+                console.error("Error getting location:", error);
+                reject(error);
+            });
+        } else {
+            console.log("Geolocation is not supported by this browser.");
+            reject("Geolocation not supported");
+        }
+    }); 
+}
+
+  
   return (
     <div className="w-[90%] mx-auto flex flex-col gap-3 laptop:flex-row laptop:h-12 laptop:justify-end">
       <div className='relative laptop:w-80'>
@@ -88,9 +134,14 @@ const SearchContainer = ({setDisplayTurfs }) => {
             value={cityNameInput}
             onChange={(e) => {
               setCityNameInput(e.target.value)
-              setItemShow(true) //if any modify happen then state city show until click 
+
+            setItemShow(true)//if any modify happen then state city show until click 
             }}
           />
+          <img src={geoLocationIcon} alt="" onClick={() => {
+            getGeolocation()
+          }
+          }/>
         </div>
         { itemShow && cityNameInput && (
           <ul className='absolute z-10 bg-white w-full top-11 border border-slate-400 rounded-lg border-t-0 rounded-t-none max-h-[277px] overflow-auto'>
@@ -102,10 +153,10 @@ const SearchContainer = ({setDisplayTurfs }) => {
                   state={stateName}
                   onClick={(city, state) => {
                     setCityNameInput(`${city} ,${state}`) 
+                    setCurrentCity(city)
                     filterTurf(city)
-                    setItemShow(!itemShow)
                   }
-                  
+                
                   }
                 />
               ))
@@ -129,5 +180,8 @@ const SearchContainer = ({setDisplayTurfs }) => {
     </div>
   );
 };
+
+
+
 
 export default SearchContainer;

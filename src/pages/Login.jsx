@@ -4,9 +4,6 @@ import { FcGoogle } from "react-icons/fc";
 import PropTypes from 'prop-types';
 import OtpInput from "../components/ui/OtpInput";
 
-import { auth } from "../services/firebase.config";
-import { RecaptchaVerifier,signInWithPhoneNumber } from 'firebase/auth'
-
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
@@ -45,22 +42,6 @@ function Login({ onClose }) {
         }
     };
 
-    function onCaptchaVerify() {
-        if (!window.recaptchaVerifier) {
-            window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
-                'size': 'invisible',
-                'callback': (response) => {
-                  // reCAPTCHA solved, allow signInWithPhoneNumber.
-                handleSubmit()
-                },
-                'expired-callback': () => {
-                  // Response expired. Ask user to solve reCAPTCHA again.
-                  // ...
-                }
-            });
-        }
-    }
-
     const handleSubmit = () => {
     
         const regex = /[^0-9]/g;
@@ -68,23 +49,8 @@ function Login({ onClose }) {
             alert("Invalid phone number");
             return;
         }
-        onCaptchaVerify();
-        const appVerifier = window.recaptchaVerifier
-        const formatPhoneNumber = '+' + phoneNo
-        console.log(auth, formatPhoneNumber, appVerifier)
-        signInWithPhoneNumber(auth, formatPhoneNumber, appVerifier)
-    .then((confirmationResult) => {
-      // SMS sent. Prompt user to type the code from the message, then sign the
-        // user in with confirmationResult.confirm(code).
-        window.confirmationResult = confirmationResult;
+        console.log(phoneNo)
         setShowOtpInput(true) // show otp
-        alert("OTP sended successfully")
-    
-    }).catch((error) => {
-        console.log(error)
-        console.log('hii')
-    });
-        
     };
 
     const onOtpSubmit = (otp) => {
@@ -162,7 +128,6 @@ function Login({ onClose }) {
                                     }}
                                 />
                             </div>
-                            <div id="recaptcha-container"></div>
                             <button onClick={handleSubmit} type="submit" className="font-semibold text-white bg-[#1AB65C] w-full py-3 rounded-md mb-6 hover:bg-[#159c4d] transition-colors duration-200">
                                 Continue
                             </button>

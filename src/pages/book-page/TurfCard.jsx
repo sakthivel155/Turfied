@@ -19,7 +19,7 @@ const sportIcons = {
 
 export const TurfCard = (turf) => {
     return (
-      <div className='bg-white flex rounded-lg laptop:flex-col'>
+      <div className='bg-white flex rounded-lg laptop:flex-col laptop:transition-all laptop:duration-300 laptop:hover:scale-[105%]'>
         <div className=' relative w-[40%] laptop:w-[100%]'>
           <img 
             src={turf.imageUrl} 

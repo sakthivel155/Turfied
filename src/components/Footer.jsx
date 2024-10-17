@@ -3,7 +3,7 @@ import Footercard from './ui/Footercard.jsx';
 import { footCards } from '../data/linkList.js'
 const Footer = () => {
     return (
-    <footer className="m-8 laptop:max-w-[90%] laptop:mx-auto">
+    <footer className="m-8 laptop:max-w-[90%] laptop:mx-auto laptop:mt-20">
         <div className='grid grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))] gap-5 '>
         <div className="mb-5 flex flex-col gap-2 text-sm">
         <svg
