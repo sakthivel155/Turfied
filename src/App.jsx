@@ -1,4 +1,4 @@
-import { useState ,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -11,47 +11,51 @@ import './App.css';
 
 function App() {
   const [isLoginVisible, setIsLoginVisible] = useState(false);
-  const [ currentCity , setCurrentCity ] = useState('');
-  useEffect(() => {
-    getGeolocation();
-  }, []); 
+  const [currentCity, setCurrentCity] = useState('');
 
-  
-  function getGeolocation() {
-    
-    return [new Promise((resolve, reject) => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                const latitude = position.coords.latitude;
-                const longitude = position.coords.longitude;
-            
-                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
-                    .then(response => response.json())
-                    .then(data => {
-      
-                      const district = data.address.county || data.address.district || 'N/A'
-                    
-                    
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const district = await getGeolocation();
+        setCurrentCity(district);
+      } catch (error) {
+        console.error("Location fetch failed:", error);
+      }
+    };
+
+    fetchLocation();
+  }, []); // Empty dependency array means this runs once on component mount
+
+  async function getGeolocation() {
+    return new Promise((resolve, reject) => {
+      if (!navigator.geolocation) {
+        reject("Geolocation is not supported by this browser.");
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
           
-                      setCurrentCity(district)
-                      resolve(district);
-                  
-                    })
-                    .catch(error => {
-                        console.error("Error getting location details:", error);
-                        reject(error);
-                    });
-            }, (error) => {
-                console.error("Error getting location:", error);
-                reject(error);
+          fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+            .then(response => response.json())
+            .then(data => {
+              const district = data.address.county || data.address.district || 'N/A';
+              resolve(district);
+            })
+            .catch(error => {
+              console.error("Error getting location details:", error);
+              reject(error);
             });
-        } else {
-            console.log("Geolocation is not supported by this browser.");
-            reject("Geolocation not supported");
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+          reject(error);
         }
-    }) , currentCity]; 
-}
-  
+      );
+    });
+  }
+
   const toggleLogin = () => {
     setIsLoginVisible(!isLoginVisible);
   };
