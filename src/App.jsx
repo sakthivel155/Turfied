@@ -40,7 +40,7 @@ function App() {
           fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
             .then(response => response.json())
             .then(data => {
-              const district = data.address.county || data.address.district || 'N/A';
+              const district = data.address.county || data.address.district || 'Nearby';
               resolve(district);
             })
             .catch(error => {
