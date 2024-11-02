@@ -13,7 +13,7 @@ function Book({currentCity,setCurrentCity}) {
         <>
             <main>
                 <div className="bg-gray-400 pb-3 tablet:flex tablet:flex-col laptop:pb-0 tablet:items-center laptop:tablet:flex-row laptop:px-5">
-                    <h2 className="font-black  max-w-[300px] text-lg text-center mx-auto py-3 tablet:py-3 tablet:mx-3 laptop:text-left laptop:text-xl">Discover and Book Top Sports venues in {currentCity}</h2>
+                    <h2 className="font-black  max-w-[300px] text-lg text-center mx-auto py-3 tablet:py-3 tablet:mx-3 laptop:text-left laptop:text-xl">Discover and Book Top Sports venues in {currentCity?currentCity: 'Nearby'}</h2>
                     <SearchContainer displayTurfs={displayTurfs} setDisplayTurfs={setDisplayTurfs} setCurrentCity={setCurrentCity} />
                 </div>
                 <Breadcrumb/>
