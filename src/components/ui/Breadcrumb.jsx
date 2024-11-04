@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { turfs } from "../../data/turfDetails"; // Import your turfs data
 
 const Breadcrumb = () => {
   const location = useLocation();
@@ -15,10 +16,25 @@ const Breadcrumb = () => {
 
     pathSegments.forEach(segment => {
       accumulatedPath += `/${segment}`;
-      newBreadcrumbs.push({
-        label: segment.charAt(0).toUpperCase() + segment.slice(1),
-        path: accumulatedPath
-      });
+      
+      // Check if the segment is a turf ID
+      if (segment.match(/^\d+$/)) {  // Check if segment is a number
+        const turf = turfs.find(t => t.turf_id === Number(segment));
+        // If turf is found, use its name, otherwise use the segment
+        const label = turf ? turf.turf_name : segment;
+        newBreadcrumbs.push({
+          label: label,
+          path: accumulatedPath
+        });
+      } else {
+        // Replace "book" with "venues" in the breadcrumb label
+        const label = segment.toLowerCase() === 'book' ? 'Venues' : 
+          segment.charAt(0).toUpperCase() + segment.slice(1);
+        newBreadcrumbs.push({
+          label: label,
+          path: accumulatedPath
+        });
+      }
     });
 
     setBreadcrumbs(newBreadcrumbs);
@@ -26,8 +42,8 @@ const Breadcrumb = () => {
 
   const HomeIcon = () => (
     <svg
-      width="15"
-      height="15"
+      width="14"
+      height="14"
       viewBox="0 0 15 15"
       className="fill-current"
     >
@@ -37,7 +53,7 @@ const Breadcrumb = () => {
 
   const ChevronIcon = () => (
     <svg
-      width="7"
+      width="12"
       height="12"
       viewBox="0 0 7 12"
       className="fill-current"
@@ -54,10 +70,10 @@ const Breadcrumb = () => {
   return (
     <nav 
       aria-label="Breadcrumb"
-      className="hidden laptop:block bg-gray-300 border-t border-primary-green shadow-md"
+      className=" border-primary-green"
     >
-      <div className="w-[90%] mx-auto laptop:w-[96%]">
-        <ol className="flex items-center py-2" role="list">
+      <div className="w-[85%] mx-auto laptop:py-3">
+        <ol className="flex items-center" role="list">
           {breadcrumbs.map((item, index) => (
             <li 
               key={item.path}
@@ -68,21 +84,21 @@ const Breadcrumb = () => {
                 // Home icon for first item
                 <Link
                   to={item.path}
-                  className="flex items-center text-base font-medium text-body-color hover:text-primary transition-colors"
+                  className="flex  items-center  font-medium hover:text-primary transition-colors"
                 >
-                  <span className="pr-2">
+                  <span>
                     <HomeIcon />
                   </span>
                   <span className="sr-only">{item.label}</span>
                 </Link>
               ) : (
                 <>
-                  <span className="mx-3 text-body-color">
+                  <span className="mobile:mx-1 mx-3 text-body-color">
                     <ChevronIcon />
                   </span>
                   <Link
                     to={item.path}
-                    className={`text-base font-medium ${
+                    className={`text-[0.8rem] ${
                       index === breadcrumbs.length - 1
                         ? "text-primary"
                         : "text-body-color hover:text-primary"

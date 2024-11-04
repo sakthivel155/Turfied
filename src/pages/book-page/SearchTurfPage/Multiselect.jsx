@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import dropDownArrow from '../../assets/icons/book-page/dropdown-arrow-svgrepo-com.svg';
+import dropDownArrow from '../../../assets/icons/book-page/dropdown-arrow-svgrepo-com.svg';
 
 const MultiSelect = ({storeFilteredTurfsForSearchVenues ,setDisplayTurfs}) => {
   const sports = [
@@ -40,7 +40,7 @@ const MultiSelect = ({storeFilteredTurfsForSearchVenues ,setDisplayTurfs}) => {
   };
 
   return (
-    <div ref={wrapperRef} className="relative bg-white px-3 py-3 border border-slate-400 rounded-lg min-w-[260px]">
+    <div ref={wrapperRef} className="relative bg-white px-3 py-3 border border-gray-600 rounded-lg min-w-[260px]">
       <div className="flex justify-between items-center" onClick={()=> setIsOpen(!isOpen)}>
         {selectedSports.length > 0 ? selectedSports.join(', ') : 'All sports'}
         <img
@@ -51,7 +51,7 @@ const MultiSelect = ({storeFilteredTurfsForSearchVenues ,setDisplayTurfs}) => {
       </div>
 
       {isOpen && (
-        <div className="absolute w-[100.5%] top-13 left-[-1px] border border-t-0 border-slate-400 z-10">
+        <div className="absolute w-[100.5%] top-13 left-[-1px] border border-t-0 border-gray-600 z-10">
           {sports.map(sport => (
             <label key={sport.value} className="flex gap-2 bg-white px-3 py-3">
               <input

@@ -18,7 +18,7 @@ export const turfs = [
           weekends: "",
           alldays : "6AM - 2AM"
         },
-      turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+      turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
   },
 {
   turf_id   : 1,
@@ -39,7 +39,7 @@ export const turfs = [
       weekends: "",
       alldays : "Open 24x7"
     },
-  turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+  turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
 turf_id   : 2,
@@ -60,7 +60,7 @@ turf_openingHours: {
     weekends: "",
     alldays : "6AM - 11PM"
   },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.46651318081!2d77.646141!3d13.039935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d58e19953f%3A0x6d18634e85c4a80b!2sGabriel%20Sports%20Club%20%7C%20Coaching%20Football%20Basketball%20%7C%20Dance%20Class%20for%20all%20ages%20%7C%20fitness%20for%20men%20and%20women%20%7C%20Turf%20Rent!5e0!3m2!1sen!2sus!4v1720450663875!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.46651318081!2d77.646141!3d13.039935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d58e19953f%3A0x6d18634e85c4a80b!2sGabriel%20Sports%20Club%20%7C%20Coaching%20Football%20Basketball%20%7C%20Dance%20Class%20for%20all%20ages%20%7C%20fitness%20for%20men%20and%20women%20%7C%20Turf%20Rent!5e0!3m2!1sen!2sus!4v1720450663875!5m2!1sen!2sus`  
 }, {
 turf_id   : 3,
 turf_name : "BTS Turf Club",
@@ -79,10 +79,10 @@ turf_openingHours: {
   weekdays: "6AM - 9AM & 3PM - 11PM On weekdays",
   weekends: "6AM - 11PM On weekends"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.0124225127067!2d77.62850816352373!3d12.968672241538192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d0d07c413f%3A0xaa53d0ab0f6822b1!2sSoccerholic%20Bangalore%20I%20Sports%20Arena%2C%20Football%20%26%20Cricket%20Court%20I%20Kids%20%26%20Adults%20Training%20I%20Best%20Sports%20Academy%20in%20Bangalore!5e0!3m2!1sen!2sus!4v1720331140158!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.0124225127067!2d77.62850816352373!3d12.968672241538192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d0d07c413f%3A0xaa53d0ab0f6822b1!2sSoccerholic%20Bangalore%20I%20Sports%20Arena%2C%20Football%20%26%20Cricket%20Court%20I%20Kids%20%26%20Adults%20Training%20I%20Best%20Sports%20Academy%20in%20Bangalore!5e0!3m2!1sen!2sus!4v1720331140158!5m2!1sen!2sus`  
 } ,
 {
-turf_id   : 0,
+turf_id   : 4,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -100,10 +100,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 5,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -121,10 +121,10 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 4,
+turf_id   : 6,
 turf_name : "Wilson Garden Club",
 turf_place: "Off Hosur Main Road",
 turf_area : "chennai",
@@ -142,10 +142,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.1822264310817!2d77.59486947208647!3d12.948515209114476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c626efd32f%3A0x38bfa60e1102ef0f!2sWilson%20Garden%20Club!5e0!3m2!1sen!2sus!4v1720445194254!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.1822264310817!2d77.59486947208647!3d12.948515209114476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c626efd32f%3A0x38bfa60e1102ef0f!2sWilson%20Garden%20Club!5e0!3m2!1sen!2sus!4v1720445194254!5m2!1sen!2sus`  
 },
 {
-turf_id   : 5,
+turf_id   : 7,
 turf_name : "AUK Sports Zone",
 turf_place: "Banagiri Nagara",
 turf_area : "chennai",
@@ -163,10 +163,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin`  
 },
 {
-      turf_id   : 0,
+      turf_id   :   8,
       turf_name : "South United Football Club",
       turf_place: "RBANM's Ground",
       turf_area : "Bangalore",
@@ -184,10 +184,10 @@ turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115
           weekends: "",
           alldays : "6AM - 2AM"
         },
-      turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+      turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
   },
 {
-  turf_id   : 1,
+  turf_id   : 9,
   turf_name : "Tiger 5 Sports Arena - Dairy Circle",
   turf_place: "Bannerghatta Road",
   turf_area : "erode",
@@ -205,10 +205,10 @@ turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115
       weekends: "",
       alldays : "Open 24x7"
     },
-  turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+  turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 5,
+turf_id   : 10,
 turf_name : "AUK Sports Zone",
 turf_place: "Banagiri Nagara",
 turf_area : "erode",
@@ -226,10 +226,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin`  
 },
 {
-turf_id   : 0,
+turf_id   : 11,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -247,10 +247,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 12,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -268,15 +268,15 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 2,
+turf_id   : 13,
 turf_name : "Gabriel Sports Club",
 turf_place: "Hennur Cross",
 turf_area : "Bangalore",
 turf_address: "108/1, 1st cross, Hormavu Agara main road, (landmark: Reliance smart point), Bengaluru- 43",
-turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.- Smoking is prohibited within 50 meters of the venue.- Participants are requested to carry their own shoes and water bottles to the venue.`,
+turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility:- Metal studs are not allowed.- Smoking is prohibited within 50 meters of the venue.- Participants are requested to carry their own shoes and water bottles to the venue.`,
 turf_contactno: "+91 945863483",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
 turf_sports: ["basketball","cricket","volleyball","football"],
@@ -289,9 +289,9 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 11PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.46651318081!2d77.646141!3d13.039935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d58e19953f%3A0x6d18634e85c4a80b!2sGabriel%20Sports%20Club%20%7C%20Coaching%20Football%20Basketball%20%7C%20Dance%20Class%20for%20all%20ages%20%7C%20fitness%20for%20men%20and%20women%20%7C%20Turf%20Rent!5e0!3m2!1sen!2sus!4v1720450663875!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.46651318081!2d77.646141!3d13.039935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d58e19953f%3A0x6d18634e85c4a80b!2sGabriel%20Sports%20Club%20%7C%20Coaching%20Football%20Basketball%20%7C%20Dance%20Class%20for%20all%20ages%20%7C%20fitness%20for%20men%20and%20women%20%7C%20Turf%20Rent!5e0!3m2!1sen!2sus!4v1720450663875!5m2!1sen!2sus`  
 }, {
-turf_id   : 3,
+turf_id   : 14,
 turf_name : "BTS Turf Club",
 turf_area : "chennai",
 turf_place: "St Meera School",
@@ -308,10 +308,10 @@ turf_openingHours: {
 weekdays: "6AM - 9AM & 3PM - 11PM On weekdays",
 weekends: "6AM - 11PM On weekends"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.0124225127067!2d77.62850816352373!3d12.968672241538192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d0d07c413f%3A0xaa53d0ab0f6822b1!2sSoccerholic%20Bangalore%20I%20Sports%20Arena%2C%20Football%20%26%20Cricket%20Court%20I%20Kids%20%26%20Adults%20Training%20I%20Best%20Sports%20Academy%20in%20Bangalore!5e0!3m2!1sen!2sus!4v1720331140158!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.0124225127067!2d77.62850816352373!3d12.968672241538192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d0d07c413f%3A0xaa53d0ab0f6822b1!2sSoccerholic%20Bangalore%20I%20Sports%20Arena%2C%20Football%20%26%20Cricket%20Court%20I%20Kids%20%26%20Adults%20Training%20I%20Best%20Sports%20Academy%20in%20Bangalore!5e0!3m2!1sen!2sus!4v1720331140158!5m2!1sen!2sus`  
 } ,
 {
-turf_id   : 0,
+turf_id   : 15,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -329,10 +329,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 16,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -350,10 +350,10 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 4,
+turf_id   : 17,
 turf_name : "Wilson Garden Club",
 turf_place: "Off Hosur Main Road",
 turf_area : "chennai",
@@ -371,10 +371,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.1822264310817!2d77.59486947208647!3d12.948515209114476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c626efd32f%3A0x38bfa60e1102ef0f!2sWilson%20Garden%20Club!5e0!3m2!1sen!2sus!4v1720445194254!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.1822264310817!2d77.59486947208647!3d12.948515209114476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c626efd32f%3A0x38bfa60e1102ef0f!2sWilson%20Garden%20Club!5e0!3m2!1sen!2sus!4v1720445194254!5m2!1sen!2sus`  
 },
 {
-turf_id   : 5,
+turf_id   : 18,
 turf_name : "AUK Sports Zone",
 turf_place: "Banagiri Nagara",
 turf_area : "chennai",
@@ -392,10 +392,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin`  
 },
 {
-turf_id   : 0,
+turf_id   : 19,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -413,10 +413,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 20,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -434,10 +434,10 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 5,
+turf_id   : 21,
 turf_name : "AUK Sports Zone",
 turf_place: "Banagiri Nagara",
 turf_area : "erode",
@@ -455,10 +455,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin`  
 },
 {
-turf_id   : 0,
+  turf_id: 22,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -476,10 +476,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 23,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -497,10 +497,10 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 2,
+turf_id   : 24,
 turf_name : "Gabriel Sports Club",
 turf_place: "Hennur Cross",
 turf_area : "Bangalore",
@@ -518,9 +518,9 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 11PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.46651318081!2d77.646141!3d13.039935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d58e19953f%3A0x6d18634e85c4a80b!2sGabriel%20Sports%20Club%20%7C%20Coaching%20Football%20Basketball%20%7C%20Dance%20Class%20for%20all%20ages%20%7C%20fitness%20for%20men%20and%20women%20%7C%20Turf%20Rent!5e0!3m2!1sen!2sus!4v1720450663875!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.46651318081!2d77.646141!3d13.039935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d58e19953f%3A0x6d18634e85c4a80b!2sGabriel%20Sports%20Club%20%7C%20Coaching%20Football%20Basketball%20%7C%20Dance%20Class%20for%20all%20ages%20%7C%20fitness%20for%20men%20and%20women%20%7C%20Turf%20Rent!5e0!3m2!1sen!2sus!4v1720450663875!5m2!1sen!2sus`  
 }, {
-turf_id   : 3,
+turf_id   : 25,
 turf_name : "BTS Turf Club",
 turf_area : "chennai",
 turf_place: "St Meera School",
@@ -537,10 +537,10 @@ turf_openingHours: {
 weekdays: "6AM - 9AM & 3PM - 11PM On weekdays",
 weekends: "6AM - 11PM On weekends"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.0124225127067!2d77.62850816352373!3d12.968672241538192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d0d07c413f%3A0xaa53d0ab0f6822b1!2sSoccerholic%20Bangalore%20I%20Sports%20Arena%2C%20Football%20%26%20Cricket%20Court%20I%20Kids%20%26%20Adults%20Training%20I%20Best%20Sports%20Academy%20in%20Bangalore!5e0!3m2!1sen!2sus!4v1720331140158!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.0124225127067!2d77.62850816352373!3d12.968672241538192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d0d07c413f%3A0xaa53d0ab0f6822b1!2sSoccerholic%20Bangalore%20I%20Sports%20Arena%2C%20Football%20%26%20Cricket%20Court%20I%20Kids%20%26%20Adults%20Training%20I%20Best%20Sports%20Academy%20in%20Bangalore!5e0!3m2!1sen!2sus!4v1720331140158!5m2!1sen!2sus`  
 } ,
 {
-turf_id   : 0,
+turf_id   : 26,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -558,10 +558,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 27,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -579,10 +579,10 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 4,
+turf_id   :   28,
 turf_name : "Wilson Garden Club",
 turf_place: "Off Hosur Main Road",
 turf_area : "chennai",
@@ -600,10 +600,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.1822264310817!2d77.59486947208647!3d12.948515209114476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c626efd32f%3A0x38bfa60e1102ef0f!2sWilson%20Garden%20Club!5e0!3m2!1sen!2sus!4v1720445194254!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.1822264310817!2d77.59486947208647!3d12.948515209114476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c626efd32f%3A0x38bfa60e1102ef0f!2sWilson%20Garden%20Club!5e0!3m2!1sen!2sus!4v1720445194254!5m2!1sen!2sus`  
 },
 {
-turf_id   : 5,
+turf_id   : 29,
 turf_name : "AUK Sports Zone",
 turf_place: "Banagiri Nagara",
 turf_area : "chennai",
@@ -621,10 +621,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin`  
 },
 {
-turf_id   : 0,
+turf_id   :   30,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -642,10 +642,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 31,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -663,10 +663,10 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 5,
+turf_id   : 32,
 turf_name : "AUK Sports Zone",
 turf_place: "Banagiri Nagara",
 turf_area : "erode",
@@ -684,10 +684,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin`  
 },
 {
-turf_id   : 0,
+turf_id   :   33,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -705,10 +705,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 34,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -726,10 +726,10 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 2,
+turf_id   : 35,
 turf_name : "Gabriel Sports Club",
 turf_place: "Hennur Cross",
 turf_area : "Bangalore",
@@ -747,9 +747,9 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 11PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.46651318081!2d77.646141!3d13.039935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d58e19953f%3A0x6d18634e85c4a80b!2sGabriel%20Sports%20Club%20%7C%20Coaching%20Football%20Basketball%20%7C%20Dance%20Class%20for%20all%20ages%20%7C%20fitness%20for%20men%20and%20women%20%7C%20Turf%20Rent!5e0!3m2!1sen!2sus!4v1720450663875!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.46651318081!2d77.646141!3d13.039935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d58e19953f%3A0x6d18634e85c4a80b!2sGabriel%20Sports%20Club%20%7C%20Coaching%20Football%20Basketball%20%7C%20Dance%20Class%20for%20all%20ages%20%7C%20fitness%20for%20men%20and%20women%20%7C%20Turf%20Rent!5e0!3m2!1sen!2sus!4v1720450663875!5m2!1sen!2sus`  
 }, {
-turf_id   : 3,
+turf_id   : 36,
 turf_name : "BTS Turf Club",
 turf_area : "chennai",
 turf_place: "St Meera School",
@@ -764,12 +764,13 @@ turf_avg_rating: 4.20, //rating
 turf_no_of_rating:10, //no.of.rate
 turf_openingHours: {
 weekdays: "6AM - 9AM & 3PM - 11PM On weekdays",
-weekends: "6AM - 11PM On weekends"
+  weekends: "6AM - 11PM On weekends",
+alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.0124225127067!2d77.62850816352373!3d12.968672241538192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d0d07c413f%3A0xaa53d0ab0f6822b1!2sSoccerholic%20Bangalore%20I%20Sports%20Arena%2C%20Football%20%26%20Cricket%20Court%20I%20Kids%20%26%20Adults%20Training%20I%20Best%20Sports%20Academy%20in%20Bangalore!5e0!3m2!1sen!2sus!4v1720331140158!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.0124225127067!2d77.62850816352373!3d12.968672241538192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d0d07c413f%3A0xaa53d0ab0f6822b1!2sSoccerholic%20Bangalore%20I%20Sports%20Arena%2C%20Football%20%26%20Cricket%20Court%20I%20Kids%20%26%20Adults%20Training%20I%20Best%20Sports%20Academy%20in%20Bangalore!5e0!3m2!1sen!2sus!4v1720331140158!5m2!1sen!2sus`  
 } ,
 {
-turf_id   : 0,
+turf_id   : 37,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -787,10 +788,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 38,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -808,10 +809,10 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 4,
+turf_id   : 39,
 turf_name : "Wilson Garden Club",
 turf_place: "Off Hosur Main Road",
 turf_area : "chennai",
@@ -829,10 +830,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.1822264310817!2d77.59486947208647!3d12.948515209114476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c626efd32f%3A0x38bfa60e1102ef0f!2sWilson%20Garden%20Club!5e0!3m2!1sen!2sus!4v1720445194254!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.1822264310817!2d77.59486947208647!3d12.948515209114476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c626efd32f%3A0x38bfa60e1102ef0f!2sWilson%20Garden%20Club!5e0!3m2!1sen!2sus!4v1720445194254!5m2!1sen!2sus`  
 },
 {
-turf_id   : 5,
+turf_id   : 40,
 turf_name : "AUK Sports Zone",
 turf_place: "Banagiri Nagara",
 turf_area : "chennai",
@@ -850,10 +851,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin`  
 },
 {
-turf_id   : 0,
+turf_id   : 41,
 turf_name : "South United Football Club",
 turf_place: "RBANM's Ground",
 turf_area : "Bangalore",
@@ -871,10 +872,10 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 2AM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1943.92619824201!2d77.614312!3d12.981291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae168f738eb82b%3A0xce45df8cc8f4dee5!2sSouth%20United%20Football%20Club!5e0!3m2!1sen!2sus!4v1720444548855!5m2!1sen!2sus`  
 },
 {
-turf_id   : 1,
+turf_id   : 42,
 turf_name : "Tiger 5 Sports Arena - Dairy Circle",
 turf_place: "Bannerghatta Road",
 turf_area : "erode",
@@ -892,10 +893,10 @@ weekdays: "",
 weekends: "",
 alldays : "Open 24x7"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.611127372997!2d77.60082607494274!3d12.932696887379118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1520474a5d91%3A0x289b30472f37ceee!2sTiger%205%20sports%20-%20Dairy%20circle!5e0!3m2!1sen!2sin!4v1720448931348!5m2!1sen!2sin`  
 },
 {
-turf_id   : 5,
+turf_id   : 43,
 turf_name : "AUK Sports Zone",
 turf_place: "Banagiri Nagara",
 turf_area : "erode",
@@ -913,6 +914,6 @@ weekdays: "",
 weekends: "",
 alldays : "6AM - 10PM"
 },
-turf_map:`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`  
+turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.814405455036!2d77.54860265526936!3d12.924284226103945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f14e6c8c4b7%3A0x3636d11dcfd8963d!2sAUK%20SPORTS%20ZONE!5e0!3m2!1sen!2sin!4v1720452804138!5m2!1sen!2sin`  
 }
 ];

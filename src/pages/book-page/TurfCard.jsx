@@ -1,5 +1,5 @@
 import starIcon from '../../assets/icons/turf-card/star-icon.svg'
-import SportIconImg from './SportIconImg'
+import SportIconImg from './SearchTurfPage/SportIconImg'
 
 
 import basketball from '../../assets/icons/turf-card/basketball.png'

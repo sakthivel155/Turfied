@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 
 function Navbar({ toggleLogin }) {
   return (
-    <header className="sticky top-0 z-[30] bg-white tablet:shadow-xl  ">
+    <header className="sticky top-0 z-[30] bg-white tablet:shadow border-1 border-gray-600 bottom-1  border-b   ">
       <div className="flex justify-between items-center px-4 py-4 laptop:max-w-[90%] laptop:mx-auto">
         <img src={logo} alt="Logo" className="w-28" />
         <nav className="fixed flex z-20 bottom-0 left-0 w-full justify-between text-center bg-white shadow-lg rounded-t-2xl tablet:flex tablet:relative tablet:top-0 tablet:rounded-none tablet:shadow-none">

@@ -3,8 +3,8 @@ import locationIcon from '../../assets/icons/book-page/location-select.svg';
 import  geoLocationIcon from '../../assets/icons/book-page/detect-location-icon.svg';
 import searchIcon from '../../assets/icons/book-page/search-icon.svg';
 
-import MultiSelect from './Multiselect';
-import StateCitySelectCard from './StateCitySelectCard';
+import MultiSelect from './SearchTurfPage/Multiselect';
+import StateCitySelectCard from './SearchTurfPage/StateCitySelectCard';
 import { turfs } from '../../data/turfDetails';
 import { state } from '../../data/cityStates'
 
@@ -121,13 +121,13 @@ const SearchContainer = ({setDisplayTurfs,setCurrentCity}) => {
 
   
   return (
-    <div className="w-[90%] mx-auto flex flex-col gap-3 laptop:flex-row laptop:h-12 laptop:justify-end">
+    <div className="w-[90%] mx-auto my-3 flex flex-col gap-3 laptop:flex-row laptop:h-12 laptop:justify-end laptop:w-[60%]">
       <div className='relative laptop:w-80'>
-        <div className="flex items-center bg-white gap-3 p-3 border border-slate-400 rounded-lg">
+        <div className="flex items-center bg-white gap-3 p-3 border border-gray-600 rounded-lg">
           <img className="w-5 h-5" src={locationIcon} alt="location-icon" />
           <input
             type="text"
-            className="w-full outline-none"
+            className="w-full outline-none "
             id="search-area"
             autoComplete="off"
             placeholder="Search for a city, place..."
@@ -144,7 +144,7 @@ const SearchContainer = ({setDisplayTurfs,setCurrentCity}) => {
           }/>
         </div>
         { itemShow && cityNameInput && (
-          <ul className='absolute z-10 bg-white w-full top-11 border border-slate-400 rounded-lg border-t-0 rounded-t-none max-h-[277px] overflow-auto'>
+          <ul className='absolute z-10 bg-white w-full top-11 border border-gray-600 rounded-lg border-t-0 rounded-t-none max-h-[277px] overflow-auto'>
             {filteredTurfs.flatMap(([stateName, cities], stateIndex) =>
               cities.map((city, cityIndex) => (
                 <StateCitySelectCard
@@ -164,7 +164,7 @@ const SearchContainer = ({setDisplayTurfs,setCurrentCity}) => {
           </ul>
         )}
       </div>
-      <div className="flex items-center bg-white gap-3 p-3 border border-slate-400 rounded-lg">
+      <div className="flex items-center bg-white gap-3 p-3 border border-gray-600 rounded-lg">
         <img className="w-5 h-5" src={searchIcon} alt="search-icon" />
         <input
           type="text"
