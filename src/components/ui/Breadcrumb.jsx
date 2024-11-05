@@ -70,9 +70,9 @@ const Breadcrumb = () => {
   return (
     <nav 
       aria-label="Breadcrumb"
-      className=" border-primary-green"
+      className=" border-primary-green laptop:mt-3"
     >
-      <div className="w-[85%] mx-auto laptop:py-3">
+      <div className="w-[88%] mx-auto ">
         <ol className="flex items-center" role="list">
           {breadcrumbs.map((item, index) => (
             <li 
