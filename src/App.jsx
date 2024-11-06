@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Play from './pages/Play';
 import Book from './pages/Book';
 import TurfDetailPage from './pages/book-page/TurfDetailPage';
+import BookThisTurf from './pages/book-page/BookThisTurf';
 import NotFound from './pages/NotFound';
 import Login from '../src/pages/Login';
 import './App.css';
@@ -67,7 +68,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/Play' element={<Play currentCity={currentCity}/>} />
         <Route path='/Book' element={<Book currentCity={currentCity} setCurrentCity={setCurrentCity} />} />
-        <Route path='/Book/:turf_id' element={<TurfDetailPage/>} />
+        <Route path='/Book/:turf_id' element={<TurfDetailPage />} />
+        <Route path='/Book/:turf_id/book-this-turf' element={<BookThisTurf />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {isLoginVisible && <Login onClose={toggleLogin} />}

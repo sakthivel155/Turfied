@@ -13,12 +13,12 @@ const Breadcrumb = () => {
     const newBreadcrumbs = [
       { label: 'Home', path: '/' }
     ];
-
-    pathSegments.forEach(segment => {
+    
+    pathSegments.forEach((segment, index) => {
       accumulatedPath += `/${segment}`;
       
       // Check if the segment is a turf ID
-      if (segment.match(/^\d+$/)) {  // Check if segment is a number
+      if (segment.match(/^\d+$/)) {
         const turf = turfs.find(t => t.turf_id === Number(segment));
         // If turf is found, use its name, otherwise use the segment
         const label = turf ? turf.turf_name : segment;
@@ -27,19 +27,26 @@ const Breadcrumb = () => {
           path: accumulatedPath
         });
       } else {
-        // Replace "book" with "venues" in the breadcrumb label
-        const label = segment.toLowerCase() === 'book' ? 'Venues' : 
-          segment.charAt(0).toUpperCase() + segment.slice(1);
-        newBreadcrumbs.push({
-          label: label,
-          path: accumulatedPath
-        });
+        // Check if it's the last segment and is 'book-this-turf'
+        if (index === pathSegments.length - 1 && segment === 'book-this-turf') {
+          newBreadcrumbs.push({
+            label: 'Booking Now',
+            path: accumulatedPath
+          });
+        } else {
+          // Replace "book" with "venues" in the breadcrumb label
+          const label = segment.toLowerCase() === 'book' ? 'Venues' :
+            segment.charAt(0).toUpperCase() + segment.slice(1);
+          newBreadcrumbs.push({
+            label: label,
+            path: accumulatedPath
+          });
+        }
       }
     });
-
+    
     setBreadcrumbs(newBreadcrumbs);
-  }, [location]);
-
+  }, [location, turfs]);
   const HomeIcon = () => (
     <svg
       width="14"
@@ -73,7 +80,7 @@ const Breadcrumb = () => {
       className=" border-primary-green laptop:mt-3"
     >
       <div className="w-[88%] mx-auto ">
-        <ol className="flex items-center" role="list">
+        <ol className="flex items-center flex-wrap " role="list">
           {breadcrumbs.map((item, index) => (
             <li 
               key={item.path}

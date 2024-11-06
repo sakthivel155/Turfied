@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { turfs } from "../../data/turfDetails";
 import Breadcrumb from "../../components/ui/Breadcrumb";
@@ -90,9 +90,11 @@ function TurfDetailPage() {
           {/* second section */} 
             <div className="tablet:w-[30%]">
                 <img src={offerCard} alt="" className="w-full my-10 object-cover hidden laptop:block" />
+              <Link to={`/Book/${singleTurfDetail.turf_id}/book-this-turf`}>
                 <button className="bg-[#00B562] text-white py-3 px-4 rounded-lg w-full mt-4 tablet:mt-0">
-                Book Now
-              </button>
+                  Book Now
+                </button>
+              </Link>
               
               <div className="flex justify-between gap-2 mt-3">
                 <button className="flex items-center gap-1 font-bold border-gray-300 border-2 py-2 w-[50%] rounded-lg justify-center">
@@ -119,9 +121,11 @@ function TurfDetailPage() {
       </div> 
         
           <div className="tablet:hidden">
+          <Link to={`/Book/${singleTurfDetail.turf_id}/book-this-turf`}>
           <button className="bg-[#00B562] text-white py-3 px-4 rounded-lg w-full mt-4">
           Book Now
-        </button>
+              </button>
+          </Link>
         
         <div className="flex justify-between gap-2 mt-3">
           <button className="flex items-center gap-1 font-bold border-gray-300 border-2 py-2 w-[50%] rounded-lg justify-center">
