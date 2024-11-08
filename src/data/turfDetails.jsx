@@ -8,7 +8,17 @@ export const turfs = [
       turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
       turf_contactno: "+91 9723454343",
       turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-      turf_sports: ["football"],
+    turf_sports: ["football"],
+    turf_courts_and_price: {
+      '9 a side Court 1': 5200,
+      '9 a side Court 2': 5200,
+      '11 a side Court 1': 8000,
+      '7 a side Court 1': 3200,
+      '7 a side Court 2': 3200,
+      '6 a side Court 1': 2000,
+      '7 a side Court 3': 3200,
+      '7 a side Court 4': 3200
+    },
       turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
       turf_distance: 2.4, //km
       turf_avg_rating: 4.5, //rating 
@@ -29,7 +39,11 @@ export const turfs = [
   turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
   turf_contactno: "+91 8532554343",
   turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-  turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
   turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
   turf_distance: 4.4, //km
   turf_avg_rating: 3.94, //rating 
@@ -50,7 +64,10 @@ turf_address: "108/1, 1st cross, Hormavu Agara main road, (landmark: Reliance sm
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.- Smoking is prohibited within 50 meters of the venue.- Participants are requested to carry their own shoes and water bottles to the venue.`,
 turf_contactno: "+91 945863483",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["basketball","cricket","volleyball","football"],
+  turf_sports: ["basketball", "cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Standard Table 1': 150,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/GABRIELSPORTSACADEMY20220226222143463915/GabrielSportsAcademy1645914083397.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 9.4, //km
 turf_avg_rating: 5.00, //rating 
@@ -70,7 +87,10 @@ turf_address: "15, Cambridge Road, Near Sri Sai Mandir, Deena Bandu Nagar, Jeeva
 turf_about: "Football: - It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.Box Cricket:- Stumps and Bats will be provided by the venue.- Users have to bring their own Cricket Balls.",
 turf_contactno: "+91 9734214553",
 turf_amenities: ["Parking", "Restroom","Drinking Water"],
-turf_sports: ["cricket","football"],
+  turf_sports: ["cricket", "football"],
+  turf_courts_and_price: {
+    '5 a side Turf 2': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/BTSTURFCLUB20240531052641675463/BTSTurfClub1717174026110.jpg?auto=compress,format&h=300",
 turf_distance: 3.7, //km
 turf_avg_rating: 4.20, //rating 
@@ -90,7 +110,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -111,7 +141,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -132,7 +166,10 @@ turf_address: "No 35/2, 9th Cross Road, Hombe Gowda Nagara, Wilson Garden, Benga
 turf_about: `Badminton:- Non Marking Shoes compulsory for Badminton. Shoes must be worn after entering the facility.- Sports equipment not available on rent.- Barefoot play is strictly prohibited.- A maximum of 4 members per booking per badminton court is admissible.`,
 turf_contactno: "+91 935454343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["tennis"],
+  turf_sports: ["tennis"],
+  turf_courts_and_price: {
+    'Standard Synthetic Court 1': 350,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/BALAJINAGARSHUTTLECOURT/WilsonGardenClub1708877751037.jpg",
 turf_distance: 2.6, //km
 turf_avg_rating: 4.7, //rating 
@@ -153,7 +190,10 @@ turf_address: "Beside Apollo National Public School, 7 Block, Kathreguppe, Banas
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9243564942",
 turf_amenities: ["Parking","Drinking Water","Restroom"],
-turf_sports: ["cricket","football","basketball"],
+  turf_sports: ["cricket", "football", "basketball"],
+  turf_courts_and_price: {
+    '5 a Side Ground 1': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/AUKSPORTSZONE20240203093022107518/AUKSportsZone1706952610722.jpeg",
 turf_distance: 6.8, //km
 turf_avg_rating: 2.64, //rating 
@@ -174,7 +214,17 @@ turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.8144054550
       turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
       turf_contactno: "+91 9723454343",
       turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-      turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
       turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
       turf_distance: 2.4, //km
       turf_avg_rating: 4.5, //rating 
@@ -195,7 +245,11 @@ turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.8144054550
   turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
   turf_contactno: "+91 8532554343",
   turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-  turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
   turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
   turf_distance: 4.4, //km
   turf_avg_rating: 3.94, //rating 
@@ -216,7 +270,10 @@ turf_address: "Beside Apollo National Public School, 7 Block, Kathreguppe, Banas
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9243564942",
 turf_amenities: ["Parking","Drinking Water","Restroom"],
-turf_sports: ["cricket","football","basketball"],
+  turf_sports: ["cricket", "football", "basketball"],
+  turf_courts_and_price: {
+    '5 a Side Ground 1': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/AUKSPORTSZONE20240203093022107518/AUKSportsZone1706952610722.jpeg",
 turf_distance: 6.8, //km
 turf_avg_rating: 2.64, //rating 
@@ -237,7 +294,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -258,7 +325,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -279,7 +350,10 @@ turf_address: "108/1, 1st cross, Hormavu Agara main road, (landmark: Reliance sm
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility:- Metal studs are not allowed.- Smoking is prohibited within 50 meters of the venue.- Participants are requested to carry their own shoes and water bottles to the venue.`,
 turf_contactno: "+91 945863483",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["basketball","cricket","volleyball","football"],
+  turf_sports: ["basketball", "cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Standard Table 1': 150,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/GABRIELSPORTSACADEMY20220226222143463915/GabrielSportsAcademy1645914083397.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 9.4, //km
 turf_avg_rating: 5.00, //rating 
@@ -299,7 +373,10 @@ turf_address: "15, Cambridge Road, Near Sri Sai Mandir, Deena Bandu Nagar, Jeeva
 turf_about: "Football: - It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.Box Cricket:- Stumps and Bats will be provided by the venue.- Users have to bring their own Cricket Balls.",
 turf_contactno: "+91 9734214553",
 turf_amenities: ["Parking", "Restroom","Drinking Water"],
-turf_sports: ["cricket","football"],
+  turf_sports: ["cricket", "football"],
+  turf_courts_and_price: {
+    '5 a side Turf 2': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/BTSTURFCLUB20240531052641675463/BTSTurfClub1717174026110.jpg?auto=compress,format&h=300",
 turf_distance: 3.7, //km
 turf_avg_rating: 4.20, //rating 
@@ -319,7 +396,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -340,7 +427,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -361,7 +452,10 @@ turf_address: "No 35/2, 9th Cross Road, Hombe Gowda Nagara, Wilson Garden, Benga
 turf_about: `Badminton:- Non Marking Shoes compulsory for Badminton. Shoes must be worn after entering the facility.- Sports equipment not available on rent.- Barefoot play is strictly prohibited.- A maximum of 4 members per booking per badminton court is admissible.`,
 turf_contactno: "+91 935454343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["tennis"],
+  turf_sports: ["tennis"],
+  turf_courts_and_price: {
+    'Standard Synthetic Court 1': 350,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/BALAJINAGARSHUTTLECOURT/WilsonGardenClub1708877751037.jpg",
 turf_distance: 2.6, //km
 turf_avg_rating: 4.7, //rating 
@@ -382,7 +476,10 @@ turf_address: "Beside Apollo National Public School, 7 Block, Kathreguppe, Banas
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9243564942",
 turf_amenities: ["Parking","Drinking Water","Restroom"],
-turf_sports: ["cricket","football","basketball"],
+  turf_sports: ["cricket", "football", "basketball"],
+  turf_courts_and_price: {
+    '5 a Side Ground 1': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/AUKSPORTSZONE20240203093022107518/AUKSportsZone1706952610722.jpeg",
 turf_distance: 6.8, //km
 turf_avg_rating: 2.64, //rating 
@@ -403,7 +500,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -424,7 +531,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -445,7 +556,10 @@ turf_address: "Beside Apollo National Public School, 7 Block, Kathreguppe, Banas
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9243564942",
 turf_amenities: ["Parking","Drinking Water","Restroom"],
-turf_sports: ["cricket","football","basketball"],
+  turf_sports: ["cricket", "football", "basketball"],
+  turf_courts_and_price: {
+    '5 a Side Ground 1': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/AUKSPORTSZONE20240203093022107518/AUKSportsZone1706952610722.jpeg",
 turf_distance: 6.8, //km
 turf_avg_rating: 2.64, //rating 
@@ -466,7 +580,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -487,7 +611,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -508,7 +636,10 @@ turf_address: "108/1, 1st cross, Hormavu Agara main road, (landmark: Reliance sm
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.- Smoking is prohibited within 50 meters of the venue.- Participants are requested to carry their own shoes and water bottles to the venue.`,
 turf_contactno: "+91 945863483",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["basketball","cricket","volleyball","football"],
+  turf_sports: ["basketball", "cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Standard Table 1': 150,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/GABRIELSPORTSACADEMY20220226222143463915/GabrielSportsAcademy1645914083397.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 9.4, //km
 turf_avg_rating: 5.00, //rating 
@@ -528,7 +659,10 @@ turf_address: "15, Cambridge Road, Near Sri Sai Mandir, Deena Bandu Nagar, Jeeva
 turf_about: "Football: - It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.Box Cricket:- Stumps and Bats will be provided by the venue.- Users have to bring their own Cricket Balls.",
 turf_contactno: "+91 9734214553",
 turf_amenities: ["Parking", "Restroom","Drinking Water"],
-turf_sports: ["cricket","football"],
+  turf_sports: ["cricket", "football"],
+  turf_courts_and_price: {
+    '5 a side Turf 2': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/BTSTURFCLUB20240531052641675463/BTSTurfClub1717174026110.jpg?auto=compress,format&h=300",
 turf_distance: 3.7, //km
 turf_avg_rating: 4.20, //rating 
@@ -548,7 +682,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+ turf_courts_and_price: {
+      '9 a side Court 1': 5200,
+      '9 a side Court 2': 5200,
+      '11 a side Court 1': 8000,
+      '7 a side Court 1': 3200,
+      '7 a side Court 2': 3200,
+      '6 a side Court 1': 2000,
+      '7 a side Court 3': 3200,
+      '7 a side Court 4': 3200
+    },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -569,7 +713,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -590,7 +738,10 @@ turf_address: "No 35/2, 9th Cross Road, Hombe Gowda Nagara, Wilson Garden, Benga
 turf_about: `Badminton:- Non Marking Shoes compulsory for Badminton. Shoes must be worn after entering the facility.- Sports equipment not available on rent.- Barefoot play is strictly prohibited.- A maximum of 4 members per booking per badminton court is admissible.`,
 turf_contactno: "+91 935454343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["tennis"],
+  turf_sports: ["tennis"],
+  turf_courts_and_price: {
+    'Standard Synthetic Court 1': 350,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/BALAJINAGARSHUTTLECOURT/WilsonGardenClub1708877751037.jpg",
 turf_distance: 2.6, //km
 turf_avg_rating: 4.7, //rating 
@@ -611,7 +762,10 @@ turf_address: "Beside Apollo National Public School, 7 Block, Kathreguppe, Banas
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9243564942",
 turf_amenities: ["Parking","Drinking Water","Restroom"],
-turf_sports: ["cricket","football","basketball"],
+  turf_sports: ["cricket", "football", "basketball"],
+  turf_courts_and_price: {
+    '5 a Side Ground 1': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/AUKSPORTSZONE20240203093022107518/AUKSportsZone1706952610722.jpeg",
 turf_distance: 6.8, //km
 turf_avg_rating: 2.64, //rating 
@@ -632,7 +786,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -653,7 +817,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -674,7 +842,10 @@ turf_address: "Beside Apollo National Public School, 7 Block, Kathreguppe, Banas
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9243564942",
 turf_amenities: ["Parking","Drinking Water","Restroom"],
-turf_sports: ["cricket","football","basketball"],
+  turf_sports: ["cricket", "football", "basketball"],
+  turf_courts_and_price: {
+    '5 a Side Ground 1': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/AUKSPORTSZONE20240203093022107518/AUKSportsZone1706952610722.jpeg",
 turf_distance: 6.8, //km
 turf_avg_rating: 2.64, //rating 
@@ -695,7 +866,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -716,7 +897,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -737,7 +922,10 @@ turf_address: "108/1, 1st cross, Hormavu Agara main road, (landmark: Reliance sm
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.- Smoking is prohibited within 50 meters of the venue.- Participants are requested to carry their own shoes and water bottles to the venue.`,
 turf_contactno: "+91 945863483",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["basketball","cricket","volleyball","football"],
+  turf_sports: ["basketball", "cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Standard Table 1': 150,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/GABRIELSPORTSACADEMY20220226222143463915/GabrielSportsAcademy1645914083397.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 9.4, //km
 turf_avg_rating: 5.00, //rating 
@@ -757,7 +945,10 @@ turf_address: "15, Cambridge Road, Near Sri Sai Mandir, Deena Bandu Nagar, Jeeva
 turf_about: "Football: - It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.Box Cricket:- Stumps and Bats will be provided by the venue.- Users have to bring their own Cricket Balls.",
 turf_contactno: "+91 9734214553",
 turf_amenities: ["Parking", "Restroom","Drinking Water"],
-turf_sports: ["cricket","football"],
+  turf_sports: ["cricket", "football"],
+  turf_courts_and_price: {
+    '5 a side Turf 2': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/BTSTURFCLUB20240531052641675463/BTSTurfClub1717174026110.jpg?auto=compress,format&h=300",
 turf_distance: 3.7, //km
 turf_avg_rating: 4.20, //rating 
@@ -778,7 +969,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -799,7 +1000,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -820,7 +1025,10 @@ turf_address: "No 35/2, 9th Cross Road, Hombe Gowda Nagara, Wilson Garden, Benga
 turf_about: `Badminton:- Non Marking Shoes compulsory for Badminton. Shoes must be worn after entering the facility.- Sports equipment not available on rent.- Barefoot play is strictly prohibited.- A maximum of 4 members per booking per badminton court is admissible.`,
 turf_contactno: "+91 935454343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["tennis"],
+  turf_sports: ["tennis"],
+ turf_courts_and_price: {
+    'Standard Synthetic Court 1': 350,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/BALAJINAGARSHUTTLECOURT/WilsonGardenClub1708877751037.jpg",
 turf_distance: 2.6, //km
 turf_avg_rating: 4.7, //rating 
@@ -841,7 +1049,10 @@ turf_address: "Beside Apollo National Public School, 7 Block, Kathreguppe, Banas
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9243564942",
 turf_amenities: ["Parking","Drinking Water","Restroom"],
-turf_sports: ["cricket","football","basketball"],
+  turf_sports: ["cricket", "football", "basketball"],
+  turf_courts_and_price: {
+    '5 a Side Ground 1': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/AUKSPORTSZONE20240203093022107518/AUKSportsZone1706952610722.jpeg",
 turf_distance: 6.8, //km
 turf_avg_rating: 2.64, //rating 
@@ -862,7 +1073,17 @@ turf_address: "South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9723454343",
 turf_amenities: ["Parking", "Restroom","Drinking Water","Sitting Stand","First Aid"],
-turf_sports: ["football"],
+  turf_sports: ["football"],
+  turf_courts_and_price: {
+    '9 a side Court 1': 5200,
+    '9 a side Court 2': 5200,
+    '11 a side Court 1': 8000,
+    '7 a side Court 1': 3200,
+    '7 a side Court 2': 3200,
+    '6 a side Court 1': 2000,
+    '7 a side Court 3': 3200,
+    '7 a side Court 4': 3200
+  },
 turf_imgurl1 : "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749273793.jpg",
 turf_distance: 2.4, //km
 turf_avg_rating: 4.5, //rating 
@@ -883,7 +1104,11 @@ turf_address: "4/1, Bannerghatta Main Road, Bhavani Nagar, S.G. Palya, Bengaluru
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 8532554343",
 turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
-turf_sports: ["cricket","volleyball","football"],
+  turf_sports: ["cricket", "volleyball", "football"],
+  turf_courts_and_price: {
+    'Court 1': 800,
+    'Court 2': 800,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
@@ -904,7 +1129,10 @@ turf_address: "Beside Apollo National Public School, 7 Block, Kathreguppe, Banas
 turf_about: `Football:- It is recommended but not compulsory to wear football studs while playing at the facility.- Metal studs are not allowed.`,
 turf_contactno: "+91 9243564942",
 turf_amenities: ["Parking","Drinking Water","Restroom"],
-turf_sports: ["cricket","football","basketball"],
+  turf_sports: ["cricket", "football", "basketball"],
+  turf_courts_and_price: {
+    '5 a Side Ground 1': 1000,
+  },
 turf_imgurl1 : "https://playo.gumlet.io/AUKSPORTSZONE20240203093022107518/AUKSportsZone1706952610722.jpeg",
 turf_distance: 6.8, //km
 turf_avg_rating: 2.64, //rating 
