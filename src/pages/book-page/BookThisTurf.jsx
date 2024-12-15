@@ -14,6 +14,7 @@ const BookThisTurf = () => {
     const [selectedPrices, setSelectedPrices] = useState([]);
 
 
+
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [cartItems, setCartItems] = useState([]);
     const dropdownRef = useRef(null);
@@ -27,10 +28,33 @@ const BookThisTurf = () => {
             Time: e.target.time.value,    
             Courts: selectedCourts,
         }]);
+        setSelectedCourts([])
+
 
     }
+    useEffect(() => {
+       
+        const checkScreenSize = () => {
+           
+            if (window.innerWidth >= 600) {
+                setIsCartOpen(true);
+            }
+        };
+
+        // Check initial screen size
+        checkScreenSize();
+
+        // Add event listener for window resize
+        window.addEventListener('resize', checkScreenSize);
+
+        // Cleanup event listener
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+
 
     useEffect(() => {
+       
+
         const numericId = Number(turf_id);
         const foundTurf = turfs.find((turf) => turf.turf_id === numericId);
         setSingleTurfBook(foundTurf);
@@ -76,7 +100,9 @@ const BookThisTurf = () => {
     };
 
     const handleCartOpen = () => {
-        setIsCartOpen(!isCartOpen);
+       
+            setIsCartOpen(!isCartOpen);
+
     };
 
 
@@ -91,9 +117,12 @@ const BookThisTurf = () => {
     };
 
     return (
-        <>
-            <main className="mt-3">
-                <Breadcrumb />
+        <div>
+
+        
+            <main className="mt-3 ">
+                <Breadcrumb /> 
+              <div className="tablet:flex">  
                 <div className="w-[95%] mx-auto border-2 border-gray-300 mt-3 rounded-lg mb-20">
                     <div className="px-3 py-3">
                         <h2 className="font-black text-sm">{singleTurfBook.turf_name}</h2>
@@ -232,13 +261,8 @@ const BookThisTurf = () => {
                         </div>
                     </form>
                 </div>
-            </main>
-            <div className="sticky z-30 bottom-0 left-0 py-5 px-4 w-full bg-white tablet:hidden flex justify-between items-center">
-                <MdOutlineShoppingCart className="text-2xl" onClick={handleCartOpen} />
-               
-            </div>
-            {isCartOpen && (
-                <div className="absolute z-40 bottom-16 left-0 w-full bg-white shadow-lg rounded-lg p-4 max-h-60 overflow-y-scroll scrollbar">
+                {isCartOpen && (
+                <div className="fixed z-40 top-[50%] left-0 w-full bg-white shadow-lg rounded-lg p-4 max-h-60 overflow-y-scroll scrollbar tablet:relative" >
                     {cartItems.length > 0 ? (
                         <div>
                             {cartItems.map((item, index) => (
@@ -262,7 +286,13 @@ const BookThisTurf = () => {
                     )}
                 </div>
             )}
-        </>
+                </div>
+            </main>
+            <div className="sticky z-30 bottom-0 left-0 py-5 px-4 w-full bg-white tablet:hidden flex justify-between items-center">
+                <MdOutlineShoppingCart className="text-2xl" onClick={handleCartOpen} />
+               
+            </div>
+        </div>
     );
 };
 

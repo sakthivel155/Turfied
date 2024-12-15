@@ -44,7 +44,7 @@ export const turfs = [
     'Court 1': 800,
     'Court 2': 800,
   },
-  turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+  turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
   turf_distance: 4.4, //km
   turf_avg_rating: 3.94, //rating 
   turf_no_of_rating: 35, //no.of.rate
@@ -146,7 +146,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
@@ -250,7 +250,7 @@ turf_map:`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11595.8144054550
     'Court 1': 800,
     'Court 2': 800,
   },
-  turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+  turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
   turf_distance: 4.4, //km
   turf_avg_rating: 3.94, //rating 
   turf_no_of_rating: 35, //no.of.rate
@@ -330,7 +330,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
@@ -432,7 +432,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
@@ -536,7 +536,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
@@ -616,7 +616,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
@@ -718,7 +718,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
@@ -822,7 +822,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
@@ -902,7 +902,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
@@ -1005,7 +1005,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
@@ -1109,7 +1109,7 @@ turf_amenities: ["Parking","Drinking Water","Change Room","First Aid"],
     'Court 1': 800,
     'Court 2': 800,
   },
-turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSDAIRYCIRCLE20221220100139092493/Tiger5SportsDairyCircle1671530923082.jpeg",
+turf_imgurl1 : "https://playo.gumlet.io/TIGER5SPORTSPTP320240701062424690984/Tiger5SportsPTP31719815138645.jpeg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright",
 turf_distance: 4.4, //km
 turf_avg_rating: 3.94, //rating 
 turf_no_of_rating: 35, //no.of.rate
