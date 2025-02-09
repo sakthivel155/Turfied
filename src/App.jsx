@@ -62,7 +62,12 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter
+    future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}>
+      
       <Navbar toggleLogin={toggleLogin} />
       <Routes>
         <Route path='/' element={<Home />} />

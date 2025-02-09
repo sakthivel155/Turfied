@@ -5,15 +5,33 @@ import searchIcon from '../../assets/icons/book-page/search-icon.svg';
 
 import MultiSelect from './SearchTurfPage/Multiselect';
 import StateCitySelectCard from './SearchTurfPage/StateCitySelectCard';
-import { turfs } from '../../data/turfDetails';
+
 import { state } from '../../data/cityStates'
 
-const SearchContainer = ({setDisplayTurfs,setCurrentCity}) => {
+const SearchContainer = ({ setDisplayTurfs, setCurrentCity }) => {
+  
+  const [ turfs, setTurfs ] = useState([]);
   const [cityNameInput, setCityNameInput] = useState('');
   const [venueNameInput, setVenueNameInput] = useState('');
-
-
   
+  const fetchTurfs = async () => { 
+    try {
+      const response = await fetch('http://localhost:3000/api/getTurfs'); 
+      const data = await response.json();
+      setTurfs(data);
+      setDisplayTurfs(data);
+      setStoreFilteredTurfsForSearchVenues(data);
+    }
+    catch (error) {
+      console.error('Error fetching turfs:', error);
+    }
+}; 
+
+useEffect(() => { 
+  fetchTurfs();
+}, []); 
+  
+
   useEffect(() => {
     dropDownCityFilter(cityNameInput);
   }, [cityNameInput]);
