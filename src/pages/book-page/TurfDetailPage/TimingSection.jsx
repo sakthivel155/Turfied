@@ -1,5 +1,5 @@
 const TimingSection = ({ openingHours }) => (
-   
+
   
   
   <section className="mt-5 border border-gray-300 px-4 py-3 rounded-md">

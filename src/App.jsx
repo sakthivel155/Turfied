@@ -10,11 +10,15 @@ import NotFound from './pages/NotFound';
 import Login from '../src/pages/Login';
 import './App.css';
 
+
 function App() {
   const [isLoginVisible, setIsLoginVisible] = useState(false);
   const [currentCity, setCurrentCity] = useState('');
+  const [turfs, setTurfs] = useState([]); //the turf data fetch from the API and that call from searchcontainer component
+
 
   useEffect(() => {
+    
     const fetchLocation = async () => {
       try {
         const district = await getGeolocation();
@@ -72,9 +76,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Play' element={<Play currentCity={currentCity}/>} />
-        <Route path='/Book' element={<Book currentCity={currentCity} setCurrentCity={setCurrentCity} />} />
-        <Route path='/Book/:turf_id' element={<TurfDetailPage />} />
-        <Route path='/Book/:turf_id/book-this-turf' element={<BookThisTurf />} />
+        <Route path='/Book' element={<Book currentCity={currentCity} setCurrentCity={setCurrentCity}
+          turfs={turfs} setTurfs={setTurfs} />} />
+        <Route path='/Book/:turf_id' element={<TurfDetailPage turfs={turfs} />} />
+        <Route path='/Book/:turf_id/book-this-turf' element={<BookThisTurf turfs={turfs}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {isLoginVisible && <Login onClose={toggleLogin} />}

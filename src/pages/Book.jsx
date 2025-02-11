@@ -5,16 +5,18 @@ import { useState } from "react";
 import Breadcrumb from "../components/ui/Breadcrumb";
 import { Link } from "react-router-dom";
 
-function Book({currentCity,setCurrentCity}) {
+function Book({currentCity,setCurrentCity,turfs ,setTurfs}) {
     const [displayTurfs, setDisplayTurfs] = useState([]);
 
 
     return (
-        <>
+        <>  
+            
             <main>
                 <div className="pb-3 tablet:flex tablet:flex-col laptop:pb-0 tablet:items-center laptop:tablet:flex-row laptop:px-16 laptop:bg-filter-bar-gray ">
                     <h2 className="font-black  max-w-[300px] text-xl text-center mx-auto py-3 tablet:py-3 tablet:mx-3 laptop:text-left laptop:text-2xl laptop:max-w-full">Discover and Book Top Sports venues in {currentCity?currentCity: 'Nearby'}</h2>
-                    <SearchContainer displayTurfs={displayTurfs} setDisplayTurfs={setDisplayTurfs} setCurrentCity={setCurrentCity} />
+                    <SearchContainer displayTurfs={displayTurfs} setDisplayTurfs={setDisplayTurfs} setCurrentCity={setCurrentCity}
+                        turfs={turfs} setTurfs={setTurfs} />
                 </div>
                 <Breadcrumb/>
                 <div className="grid gap-5 w-[88%] mx-auto my-3 tablet:grid-cols-[repeat(auto-fill,minmax(390px,1fr))]  laptop:my-10 laptop:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] ">

@@ -1,6 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { turfs } from "../../data/turfDetails";
 import Breadcrumb from "../../components/ui/Breadcrumb";
 import starIcon from '../../assets/icons/turf-card/star-icon.svg';
 import shareIcon from '../../assets/icons/turf-card/share-icon.svg';
@@ -15,13 +14,15 @@ import LocationSection from "./TurfDetailPage/LocationSection";
 import SportAvailableSection from "./TurfDetailPage/SportAvailableSection";
 import AmenitiesSection from "./TurfDetailPage/AmenitiesSection";
 import AboutVenueSection from "./TurfDetailPage/AboutVenueSection";
-function TurfDetailPage() {
+
+function TurfDetailPage({turfs}) {
   const { turf_id } = useParams();
   const [singleTurfDetail, setSingleTurfDetail] = useState(null);
 
   useEffect(() => {
     const numericId = Number(turf_id);
-    const foundTurf = turfs.find((turf) => turf.turf_id === numericId);
+
+    const foundTurf = turfs.find((turf) => turf.turf_id === Number(numericId));
     setSingleTurfDetail(foundTurf);
   }, [turf_id]);
 
@@ -106,7 +107,8 @@ function TurfDetailPage() {
                 </button>
               </div>
 
-              <TimingSection openingHours={singleTurfDetail.turf_openingHours} />
+              <TimingSection openingHours={singleTurfDetail.turf_opening_hours} />
+        
               
               <LocationSection 
                 address={singleTurfDetail.turf_address}

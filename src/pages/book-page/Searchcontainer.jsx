@@ -8,12 +8,11 @@ import StateCitySelectCard from './SearchTurfPage/StateCitySelectCard';
 
 import { state } from '../../data/cityStates'
 
-const SearchContainer = ({ setDisplayTurfs, setCurrentCity }) => {
+const SearchContainer = ({ setDisplayTurfs, setCurrentCity ,turfs, setTurfs}) => {
   
-  const [ turfs, setTurfs ] = useState([]);
   const [cityNameInput, setCityNameInput] = useState('');
   const [venueNameInput, setVenueNameInput] = useState('');
-  
+
   const fetchTurfs = async () => { 
     try {
       const response = await fetch('http://localhost:3000/api/getTurfs'); 
@@ -25,8 +24,8 @@ const SearchContainer = ({ setDisplayTurfs, setCurrentCity }) => {
     catch (error) {
       console.error('Error fetching turfs:', error);
     }
-}; 
-
+  }; 
+  
 useEffect(() => { 
   fetchTurfs();
 }, []); 

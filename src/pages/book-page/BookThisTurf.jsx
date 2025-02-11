@@ -1,10 +1,10 @@
 import Breadcrumb from "../../components/ui/Breadcrumb";
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
-import { turfs } from "../../data/turfDetails";
+
 import { MdOutlineShoppingCart, MdClose, MdCheck } from "react-icons/md";
 
-const BookThisTurf = () => {
+const BookThisTurf = ({turfs}) => {
     const { turf_id } = useParams();
     const [singleTurfBook, setSingleTurfBook] = useState(null);
     const [duration, setDuration] = useState(1);
@@ -33,9 +33,9 @@ const BookThisTurf = () => {
 
     }
     useEffect(() => {
-       
+    
         const checkScreenSize = () => {
-           
+        
             if (window.innerWidth >= 600) {
                 setIsCartOpen(true);
             }
@@ -53,7 +53,7 @@ const BookThisTurf = () => {
 
 
     useEffect(() => {
-       
+    
 
         const numericId = Number(turf_id);
         const foundTurf = turfs.find((turf) => turf.turf_id === numericId);
@@ -100,7 +100,7 @@ const BookThisTurf = () => {
     };
 
     const handleCartOpen = () => {
-       
+    
             setIsCartOpen(!isCartOpen);
 
     };
@@ -122,7 +122,7 @@ const BookThisTurf = () => {
         
             <main className="mt-3 ">
                 <Breadcrumb /> 
-              <div className="tablet:flex">  
+            <div className="tablet:flex">  
                 <div className="w-[95%] mx-auto border-2 border-gray-300 mt-3 rounded-lg mb-20">
                     <div className="px-3 py-3">
                         <h2 className="font-black text-sm">{singleTurfBook.turf_name}</h2>
