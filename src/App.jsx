@@ -8,7 +8,7 @@ import TurfDetailPage from './pages/book-page/TurfDetailPage';
 import BookThisTurf from './pages/book-page/BookThisTurf';
 import NotFound from './pages/NotFound';
 import Login from '../src/pages/Login';
-import './App.css';
+
 
 
 function App() {
