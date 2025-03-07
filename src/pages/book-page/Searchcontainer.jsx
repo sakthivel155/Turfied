@@ -15,7 +15,7 @@ const SearchContainer = ({ setDisplayTurfs, setCurrentCity ,turfs, setTurfs}) =>
 
   const fetchTurfs = async () => { 
     try {
-      const response = await fetch('http://localhost:3000/api/getTurfs'); 
+      const response = await fetch('http://localhost:3000/api/turf/getTurfs'); 
       const data = await response.json();
       setTurfs(data);
       setDisplayTurfs(data);
