@@ -18,6 +18,7 @@ function AuthComponent({ onClose }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [usernameOrEmail, setUsernameOrEmail] = useState(''); 
     
     // UI states
     const [isVisible, setIsVisible] = useState(false);
@@ -254,7 +255,7 @@ function AuthComponent({ onClose }) {
                                 name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder={`Email ${authMode==='signup'? '':'or Username'}`}
+                                placeholder={`Email `}
                                 ref={emailInputRef}
                                 className="w-full py-2 px-3 pl-10 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                                 required
@@ -264,7 +265,7 @@ function AuthComponent({ onClose }) {
                             <MdEmail className="absolute left-3 top-3 text-gray-400" />
                         </div>
                         
-                        {/* Username field - shown only in signup mode */}
+                        
                         {authMode === "signup" && (
                             <div className="relative">
                                 <input
