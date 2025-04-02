@@ -1,10 +1,37 @@
+:root{
+    --c-lite-gray:#f1f3f2;
+}
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import url('./style/color.css');
-@import url('./style/global.css');
-@import url('./style/animation.css');
+
+
+
+body{
+    color:rgb(19, 67, 43);
+    font-family: figtree-reg;
+	background-color:var(--c-lite-gray);
+}
+h1{
+    font-family: figtree-black;
+}
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 5px;  /* width of vertical scrollbar */
+  height: 10px; /* height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #88888893;    /* scrollbar handle */
+  border-radius: 5px;
+}
+
 
 @font-face {
     font-family: 'figtree-reg';
@@ -20,3 +47,27 @@
 
 
 
+.top-down-slide-enter {
+    opacity: 0;
+    transform: translateY(-100%); /* Start off-screen at the top */
+  }
+  
+  .top-down-slide-enter-active {
+    opacity: 1;
+    transform: translateY(0); /* Animate to the top of the screen */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Set animation duration and timing function */
+  }
+
+
+
+
+  .bottom-up-slide-enter {
+    opacity: 0;
+    transform: translateY(100%); /* Start off-screen at the bottom */
+  }
+  
+  .bottom-up-slide-enter-active {
+    opacity: 1;
+    transform: translateY(0); /* Animate to the bottom of the screen */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Set animation duration and timing function */
+  }
