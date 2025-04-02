@@ -115,6 +115,23 @@ const BookThisTurf = ({turfs}) => {
             maximumFractionDigits: 0
         }).format(price);
     };
+    const convertToArray = (str) => {
+        if (Array.isArray(str)) return str; // If already an array, return as is
+        
+        if (typeof str !== 'string') return []; // If not a string, return empty array
+        
+        // Remove curly braces at beginning and end
+        const withoutBraces = str.replace(/^{|}$/g, '');
+        
+        // Split by comma, clean up each item
+        return withoutBraces
+          .split(',')
+          .map(item => item.replace(/"/g, '').trim())
+          .filter(item => item.length > 0);
+      };
+    
+      // Parse the availableSport string into an array
+    const sportsArray = convertToArray(singleTurfBook.turf_sports);
 
     return (
         <div>
@@ -139,7 +156,7 @@ const BookThisTurf = ({turfs}) => {
                                 name="sports"
                                 className="w-full capitalize outline-none"
                             >
-                                {singleTurfBook.turf_sports.map((sport, index) => (
+                                {sportsArray.map((sport, index) => (
                                     <option className="capitalize" key={index} value={sport}>{sport}</option>
                                 ))}
                             </select>

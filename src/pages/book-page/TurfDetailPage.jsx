@@ -15,6 +15,22 @@ import SportAvailableSection from "./TurfDetailPage/SportAvailableSection";
 import AmenitiesSection from "./TurfDetailPage/AmenitiesSection";
 import AboutVenueSection from "./TurfDetailPage/AboutVenueSection";
 
+
+const convertToArray = (str) => {
+  if (Array.isArray(str)) return str; // If already an array, return as is
+  
+  if (typeof str !== 'string') return []; // If not a string, return empty array
+  
+  // Remove curly braces at beginning and end
+  const withoutBraces = str.replace(/^{|}$/g, '');
+  
+  // Split by comma, clean up each item
+  return withoutBraces
+    .split(',')
+    .map(item => item.replace(/"/g, '').trim())
+    .filter(item => item.length > 0);
+};
+
 function TurfDetailPage({turfs}) {
   const { turf_id } = useParams();
   const [singleTurfDetail, setSingleTurfDetail] = useState(null);
@@ -30,6 +46,8 @@ function TurfDetailPage({turfs}) {
     return null;
   }
 
+
+  const turfAmenitiesArray = convertToArray(singleTurfDetail.turf_amenities);
   return (
     <>
       <main className="py-4">
@@ -66,7 +84,8 @@ function TurfDetailPage({turfs}) {
               </div>
       <div className="hidden tablet:block">   
         <SportAvailableSection availableSport={singleTurfDetail.turf_sports} />
-        <AmenitiesSection availableAmenities={singleTurfDetail.turf_amenities} /> 
+                <AmenitiesSection availableAmenities={turfAmenitiesArray} /> 
+
         <AboutVenueSection aboutVenue={singleTurfDetail.turf_about} />
       </div> 
       </div>   
@@ -118,7 +137,7 @@ function TurfDetailPage({turfs}) {
         </div>
       <div className="tablet:hidden">   
         <SportAvailableSection availableSport={singleTurfDetail.turf_sports} />
-        <AmenitiesSection availableAmenities={singleTurfDetail.turf_amenities} /> 
+        <AmenitiesSection availableAmenities={turfAmenitiesArray} /> 
         <AboutVenueSection aboutVenue={singleTurfDetail.turf_about} />
       </div> 
         
