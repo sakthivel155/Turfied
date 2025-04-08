@@ -123,7 +123,7 @@ function AuthComponent({ onClose }) {
                     setLoading(true);
                     // Here you would handle email-based login
                     try {
-                        const response = await fetch('http://localhost:3000/api/user/login', {
+                        const response = await fetch('https://turfiedserver.onrender.com/api/user/login', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
@@ -156,7 +156,7 @@ function AuthComponent({ onClose }) {
                     const newUser = { email, username, password };
                     
                     try {
-                        const response = await fetch('http://localhost:3000/api/user/signup', {
+                        const response = await fetch('https://turfiedserver.onrender.com/api/user/signup', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
