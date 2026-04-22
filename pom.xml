@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.turfied</groupId>
-	<artifactId>turfied-backend</artifactId>
+	<artifactId>turfied</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
