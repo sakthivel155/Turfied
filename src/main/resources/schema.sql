@@ -1,0 +1,1 @@
+ALTER TABLE IF EXISTS bookings DROP CONSTRAINT IF EXISTS uk_slot_date;
