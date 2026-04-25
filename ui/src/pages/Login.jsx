@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 function AuthComponent({ onClose }) {
     // Authentication state
     const [authMode, setAuthMode] = useState("login"); // "login" or "signup"
-    
+
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState(null);
@@ -18,13 +18,13 @@ function AuthComponent({ onClose }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [usernameOrEmail, setUsernameOrEmail] = useState(''); 
-    
+    const [usernameOrEmail, setUsernameOrEmail] = useState('');
+
     // UI states
     const [isVisible, setIsVisible] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    
+
     // Refs
     const emailInputRef = useRef(null);
     const authFormRef = useRef(null);
@@ -34,17 +34,17 @@ function AuthComponent({ onClose }) {
         if (emailInputRef.current) {
             emailInputRef.current.focus();
         }
-        
+
         const timer = setTimeout(() => setIsVisible(true), 100);
-        
+
         const handleClickOutside = (event) => {
             if (authFormRef.current && !authFormRef.current.contains(event.target)) {
                 onClose();
             }
         };
-        
+
         document.addEventListener('mousedown', handleClickOutside);
-        
+
         return () => {
             clearTimeout(timer);
             document.removeEventListener('mousedown', handleClickOutside);
@@ -65,12 +65,12 @@ function AuthComponent({ onClose }) {
     const showNotification = (msg, type = "error") => {
         setMessage(msg);
         setMessageType(type);
-        
+
         // Clear any existing timers
         if (messageTimerRef.current) {
             clearTimeout(messageTimerRef.current);
         }
-        
+
         // Set new timer to clear message after 5 seconds
         messageTimerRef.current = setTimeout(() => {
             setMessage(null);
@@ -98,7 +98,7 @@ function AuthComponent({ onClose }) {
         if (!validateEmail()) {
             return false;
         }
-        
+
         if (username.length < 4) {
             showNotification("Username must be at least 4 characters long");
             return false;
@@ -123,16 +123,16 @@ function AuthComponent({ onClose }) {
                     setLoading(true);
                     // Here you would handle email-based login
                     try {
-                        const response = await fetch('https://turfiedserver.onrender.com/api/user/login', {
+                        const response = await fetch('/api/user/login', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
                             },
                             body: JSON.stringify({ email, password })
                         });
-                        
+
                         const data = await response.json();
-                        
+
                         if (response.ok) {
                             showNotification(data.message || "Login successful!", "success");
                             // Handle successful login (e.g., redirect, set auth context, etc.)
@@ -154,27 +154,27 @@ function AuthComponent({ onClose }) {
                 if (validateSignupForm()) {
                     setLoading(true);
                     const newUser = { email, username, password };
-                    
+
                     try {
-                        const response = await fetch('https://turfiedserver.onrender.com/api/user/signup', {
+                        const response = await fetch('/api/user/signup', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
                             },
                             body: JSON.stringify(newUser)
                         });
-                        
+
                         const data = await response.json();
-                     
+
                         if (response.ok) {
-                            
+
                             showNotification(data.message || "Account created successfully!", "success");
                             // Auto-switch to login mode after successful signup
                             setTimeout(() => {
                                 setMessage(null);
                             }, 5000);
                         } else {
-                    
+
                             showNotification(data.message || "Signup failed. Please try again.");
                         }
                     } catch (error) {
@@ -219,9 +219,8 @@ function AuthComponent({ onClose }) {
         <div className=" fixed inset-0 z-50 flex items-start justify-end tablet:pr-10  bg-black bg-opacity-50">
             {/* Message Toast */}
             {message && (
-                <div className={`fixed top-2 right-0 px-3 w-full py-2 tablet:rounded-l-md tablet:border-l-8 shadow-md z-50 transform transition-all duration-300 animate-fadeIn ${
-                    messageType === "success" ? "bg-green-200 tablet:border-green-500 text-green-900 text-lg" : "bg-red-200 tablet:border-red-500 text-red-900 text-lg"
-                }`}>
+                <div className={`fixed top-2 right-0 px-3 w-full py-2 tablet:rounded-l-md tablet:border-l-8 shadow-md z-50 transform transition-all duration-300 animate-fadeIn ${messageType === "success" ? "bg-green-200 tablet:border-green-500 text-green-900 text-lg" : "bg-red-200 tablet:border-red-500 text-red-900 text-lg"
+                    }`}>
                     {message}
                 </div>
             )}
@@ -246,7 +245,7 @@ function AuthComponent({ onClose }) {
                     <h2 className="font-black text-[2rem] my-6 w-[94%] tablet:mt-0">
                         {authMode === "login" ? "Login to Turfied" : "Sign Up for Turfied"}
                     </h2>
-                    
+
                     <div className="space-y-4 mb-4">
                         {/* Email field - always shown */}
                         <div className="relative">
@@ -264,8 +263,8 @@ function AuthComponent({ onClose }) {
                             />
                             <MdEmail className="absolute left-3 top-3 text-gray-400" />
                         </div>
-                        
-                        
+
+
                         {authMode === "signup" && (
                             <div className="relative">
                                 <input
@@ -282,7 +281,7 @@ function AuthComponent({ onClose }) {
                                 <FaUser className="absolute left-3 top-3 text-gray-400" />
                             </div>
                         )}
-                        
+
                         {/* Password field - always shown */}
                         <div className="relative">
                             <input
@@ -296,8 +295,8 @@ function AuthComponent({ onClose }) {
                                 disabled={loading}
                             />
                             <FaLock className="absolute left-3 top-3 text-gray-400" />
-                            <button 
-                                type="button" 
+                            <button
+                                type="button"
                                 className="absolute right-3 top-3 text-gray-400"
                                 onClick={() => setShowPassword(!showPassword)}
                                 disabled={loading}
@@ -305,7 +304,7 @@ function AuthComponent({ onClose }) {
                                 {showPassword ? <FaEyeSlash /> : <FaEye />}
                             </button>
                         </div>
-                        
+
                         {/* Confirm Password field - shown only in signup mode */}
                         {authMode === "signup" && (
                             <div className="relative">
@@ -320,8 +319,8 @@ function AuthComponent({ onClose }) {
                                     disabled={loading}
                                 />
                                 <FaLock className="absolute left-3 top-3 text-gray-400" />
-                                <button 
-                                    type="button" 
+                                <button
+                                    type="button"
                                     className="absolute right-3 top-3 text-gray-400"
                                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                                     disabled={loading}
@@ -335,7 +334,7 @@ function AuthComponent({ onClose }) {
                     {/* Forgot Password link - shown only in login mode */}
                     {authMode === "login" && (
                         <div className="flex justify-end mb-4">
-                            <button 
+                            <button
                                 className="text-sm text-[#1AB65C] hover:underline"
                                 disabled={loading}
                             >
@@ -343,23 +342,22 @@ function AuthComponent({ onClose }) {
                             </button>
                         </div>
                     )}
-                    <button 
-                        onClick={handleSubmit} 
-                        type="submit" 
-                        className={`font-semibold text-white bg-[#1AB65C] w-full py-3 rounded-md mb-4 hover:bg-[#159c4d] transition-colors duration-200 ${
-                            loading ? 'opacity-75 cursor-not-allowed' : ''
-                        }`}
+                    <button
+                        onClick={handleSubmit}
+                        type="submit"
+                        className={`font-semibold text-white bg-[#1AB65C] w-full py-3 rounded-md mb-4 hover:bg-[#159c4d] transition-colors duration-200 ${loading ? 'opacity-75 cursor-not-allowed' : ''
+                            }`}
                         disabled={loading}
                     >
                         {loading ? 'Processing...' : (authMode === "login" ? "Login" : "Sign Up")}
                     </button>
-                    
+
                     <p className="text-center mb-4">
-                        {authMode === "login" 
-                            ? "Don't have an account?" 
+                        {authMode === "login"
+                            ? "Don't have an account?"
                             : "Already have an account?"
-                        } 
-                        <button 
+                        }
+                        <button
                             onClick={switchAuthMode}
                             className="text-[#1AB65C] font-semibold ml-1 hover:underline"
                             disabled={loading}
@@ -373,18 +371,17 @@ function AuthComponent({ onClose }) {
                         <span className="px-4 text-sm text-gray-500">OR</span>
                         <div className="flex-grow h-px bg-gray-300"></div>
                     </div>
-                    
-                    <button 
+
+                    <button
                         onClick={handleGoogleAuth}
-                        className={`flex items-center justify-center w-full border-2 p-3 rounded-lg mb-6 hover:bg-gray-50 transition-colors duration-200 ${
-                            loading ? 'opacity-75 cursor-not-allowed' : ''
-                        }`}
+                        className={`flex items-center justify-center w-full border-2 p-3 rounded-lg mb-6 hover:bg-gray-50 transition-colors duration-200 ${loading ? 'opacity-75 cursor-not-allowed' : ''
+                            }`}
                         disabled={loading}
                     >
                         <FcGoogle className="text-2xl mr-2" />
                         <span className="font-semibold text-sm">
-                            {authMode === "login" 
-                                ? "Login with Google" 
+                            {authMode === "login"
+                                ? "Login with Google"
                                 : "Sign up with Google"
                             }
                         </span>

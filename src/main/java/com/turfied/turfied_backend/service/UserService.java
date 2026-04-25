@@ -6,6 +6,7 @@ import com.turfied.turfied_backend.exception.ResourceNotFoundException;
 import com.turfied.turfied_backend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -15,12 +16,14 @@ import java.util.List;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     public User registerUser(User user) {
         if (userRepository.existsByEmail(user.getEmail())) {
             throw new RuntimeException("Email already registered: " + user.getEmail());
         }
         user.setRole(user.getRole() != null ? user.getRole() : Role.USER);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         //Set by default (Need to implement later) ref: README.md
         user.setIsActive(true);
@@ -54,7 +57,7 @@ public class UserService {
         }
 
         if (user.getPassword() != null && !user.getPassword().isBlank()) {
-            existingUser.setPassword(user.getPassword());
+            existingUser.setPassword(passwordEncoder.encode(user.getPassword()));
         }
 
 
