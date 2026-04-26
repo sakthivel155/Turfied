@@ -32,6 +32,7 @@ public class Court {
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal pricePerSlot;
 
+    @Builder.Default
     @Column(nullable = false)
     private Boolean isActive = true;
 

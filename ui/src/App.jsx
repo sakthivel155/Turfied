@@ -8,6 +8,8 @@ import TurfDetailPage from './pages/book-page/TurfDetailPage';
 import BookThisTurf from './pages/book-page/BookThisTurf';
 import NotFound from './pages/NotFound';
 import Login from '../src/pages/Login';
+import Profile from './pages/Profile';
+import { ProtectedRoute } from './components/ProtectedRoute';
 
 
 
@@ -80,6 +82,7 @@ function App() {
           turfs={turfs} setTurfs={setTurfs} />} />
         <Route path='/Book/:turf_id' element={<TurfDetailPage turfs={turfs} />} />
         <Route path='/Book/:turf_id/book-this-turf' element={<BookThisTurf turfs={turfs}/>} />
+        <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {isLoginVisible && <Login onClose={toggleLogin} />}

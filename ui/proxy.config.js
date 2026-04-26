@@ -1,4 +1,4 @@
-const forwardUrl = "http://localhost:8080/";
+const forwardUrl = "http://localhost:8080";
 
 const PROXY_CONFIG = {
   "/api": {

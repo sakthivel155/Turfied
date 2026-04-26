@@ -6,8 +6,11 @@ import bookIcon from '../assets/icons/menu-icons/book.svg';
 import learnIcon from '../assets/icons/menu-icons/learn.svg';
 import login from '../assets/icons/menu-icons/login-signup.svg';
 import PropTypes from 'prop-types';
+import { useAuth } from '../context/useAuth';
+import { UserMenu } from './UserMenu';
 
 function Navbar({ toggleLogin }) {
+  const { isAuthenticated } = useAuth();
   return (
     <header className="sticky top-0 z-[30] bg-white tablet:shadow border-1 border-gray-600 bottom-1  border-b ">
       <div className="flex justify-between items-center px-4 py-4 laptop:max-w-[90%] laptop:mx-auto">
@@ -18,11 +21,15 @@ function Navbar({ toggleLogin }) {
             <li><Link to={'/Play'} className='flex flex-col items-center tablet:flex-row tablet:gap-1'><img src={playIcon} alt='Play icon' className='w-6'/>Play</Link></li>
             <li><Link to={'/Book'} className='flex flex-col items-center tablet:flex-row tablet:gap-1'><img src={bookIcon} alt='Book icon' className='w-6'/>Book</Link></li>
             <li className="tablet:ml-auto">
-              <button onClick={toggleLogin} className='flex flex-col items-center tablet:flex-row tablet:gap-1'>
-                <img src={login} alt='Login icon' className='w-6'/>
-                <span className="tablet:hidden">Login</span>
-                <span className="hidden tablet:inline">Login / SignUp</span>
-              </button>
+              {isAuthenticated ? (
+                <UserMenu />
+              ) : (
+                <button onClick={toggleLogin} className='flex flex-col items-center tablet:flex-row tablet:gap-1'>
+                  <img src={login} alt='Login icon' className='w-6'/>
+                  <span className="tablet:hidden">Login</span>
+                  <span className="hidden tablet:inline">Login / SignUp</span>
+                </button>
+              )}
             </li>
           </ul>
         </nav>

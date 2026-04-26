@@ -1,9 +1,12 @@
 package com.turfied.turfied_backend.controller;
 
+import com.turfied.turfied_backend.dto.response.UserResponse;
 import com.turfied.turfied_backend.entity.User;
 import com.turfied.turfied_backend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.*;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -13,6 +16,24 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
+    /**
+     * Get current authenticated user's profile
+     */
+    @GetMapping("/me")
+    public ResponseEntity<UserResponse> getCurrentUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String email = authentication.getName();
+        User user = userService.getUserByEmail(email);
+        return ResponseEntity.ok(new UserResponse(
+            user.getId(),
+            user.getName(),
+            user.getEmail(),
+            user.getPhone(),
+            user.getRole().toString(),
+            user.getIsVerified(),
+            user.getIsActive()
+        ));
+    }
 
     // Create
     @PostMapping

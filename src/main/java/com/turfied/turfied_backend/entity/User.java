@@ -38,9 +38,11 @@ public class User {
     private Role role;
 
     // Account Status
+    @Builder.Default
     @Column(nullable = false)
     private Boolean isActive = true;
 
+    @Builder.Default
     @Column(nullable = false)
     private Boolean isVerified = false;
 
