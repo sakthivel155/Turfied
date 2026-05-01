@@ -23,7 +23,7 @@ export const TurfCard = (turf) => {
     
     // Split by comma, then clean up each item (remove quotes, trim whitespace)
     const array = withoutBraces.split(',')
-      .map(item => item.replace(/"/g, '').trim())
+      .map(item => item.replace(/"/g, '').trim().toLowerCase())
       .filter(item => item.length > 0); // Remove any empty items
     
     return array;

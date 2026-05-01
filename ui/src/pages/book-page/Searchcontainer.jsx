@@ -15,11 +15,12 @@ const SearchContainer = ({ setDisplayTurfs, setCurrentCity ,turfs, setTurfs}) =>
 
   const fetchTurfs = async () => { 
     try {
-      const response = await fetch('/api/turf/getTurfs'); 
+      const response = await fetch('/api/v1/turfs?size=100'); 
       const data = await response.json();
-      setTurfs(data);
-      setDisplayTurfs(data);
-      setStoreFilteredTurfsForSearchVenues(data);
+      const turfList = data.content || [];
+      setTurfs(turfList);
+      setDisplayTurfs(turfList);
+      setStoreFilteredTurfsForSearchVenues(turfList);
     }
     catch (error) {
       console.error('Error fetching turfs:', error);
@@ -84,14 +85,14 @@ useEffect(() => {
       setDisplayTurfs(turfs)
     }else if (textInput.length >= 2) {
       const finnalTurfs = storeFilteredTurfsForSearchVenues.filter(turf =>
-        turf.turf_name.toLowerCase().includes(textInput.toLowerCase())
+        turf.name.toLowerCase().includes(textInput.toLowerCase())
       );
       setDisplayTurfs(finnalTurfs);
     }
   }
 
   function filterTurf(city) {
-    const displayTurfs = turfs.filter(turf => turf.turf_area.toLowerCase() === city.toLowerCase());
+    const displayTurfs = turfs.filter(turf => (turf.city && turf.city.toLowerCase() === city.toLowerCase()) || (turf.area && turf.area.toLowerCase() === city.toLowerCase()));
     if (displayTurfs.length > 0) {
       setStoreFilteredTurfsForSearchVenues(displayTurfs)
       setDisplayTurfs(displayTurfs);

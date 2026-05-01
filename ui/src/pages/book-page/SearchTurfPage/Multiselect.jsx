@@ -26,7 +26,7 @@ const MultiSelect = ({storeFilteredTurfsForSearchVenues ,setDisplayTurfs}) => {
 
   function filterTurfsBySports(selectedSports) {
     return storeFilteredTurfsForSearchVenues.filter(turf => 
-      selectedSports.length === 0 || selectedSports.some(sport => turf.turf_sports.includes(sport))
+      selectedSports.length === 0 || selectedSports.some(sport => turf.sports && turf.sports.toLowerCase().includes(sport.toLowerCase()))
     );
   }
 

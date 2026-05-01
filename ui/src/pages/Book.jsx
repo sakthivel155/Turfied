@@ -22,15 +22,15 @@ function Book({currentCity,setCurrentCity,turfs ,setTurfs}) {
                 <div className="grid gap-5 w-[88%] mx-auto my-3 tablet:grid-cols-[repeat(auto-fill,minmax(390px,1fr))]  laptop:my-10 laptop:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] ">
                     {displayTurfs.map((turf) => {
                         return (
-                    <Link to={`/Book/${turf.turf_id}`} key={turf.turf_id}>     
+                    <Link to={`/Book/${turf.id}`} key={turf.id}>     
                             <TurfCard
-                                    imageUrl={turf.turf_imgurl1}
-                                    name={turf.turf_name}
-                                    rating={turf.turf_avg_rating}
-                                    reviewCount={turf.turf_no_of_rating}
-                                    location={turf.turf_area}
-                                    distance={turf.turf_distance}
-                                    sports={turf.turf_sports}
+                                    imageUrl={turf.imageUrl}
+                                    name={turf.name}
+                                    rating={turf.avgRating}
+                                    reviewCount={turf.noOfRating}
+                                    location={turf.city}
+                                    distance={turf.distance}
+                                    sports={turf.sports}
                                     className="w-full"
                             />
                         </Link>

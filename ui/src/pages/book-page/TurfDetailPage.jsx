@@ -18,12 +18,12 @@ import AboutVenueSection from "./TurfDetailPage/AboutVenueSection";
 
 const convertToArray = (str) => {
   if (Array.isArray(str)) return str; // If already an array, return as is
-  
+
   if (typeof str !== 'string') return []; // If not a string, return empty array
-  
+
   // Remove curly braces at beginning and end
   const withoutBraces = str.replace(/^{|}$/g, '');
-  
+
   // Split by comma, clean up each item
   return withoutBraces
     .split(',')
@@ -31,14 +31,14 @@ const convertToArray = (str) => {
     .filter(item => item.length > 0);
 };
 
-function TurfDetailPage({turfs}) {
+function TurfDetailPage({ turfs }) {
   const { turf_id } = useParams();
   const [singleTurfDetail, setSingleTurfDetail] = useState(null);
 
   useEffect(() => {
     const numericId = Number(turf_id);
 
-    const foundTurf = turfs.find((turf) => turf.turf_id === Number(numericId));
+    const foundTurf = turfs.find((turf) => turf.id === Number(numericId));
     setSingleTurfDetail(foundTurf);
   }, [turf_id]);
 
@@ -46,79 +46,102 @@ function TurfDetailPage({turfs}) {
     return null;
   }
 
+  const parseOpeningHours = (str) => {
+    if (!str || typeof str !== 'string') return typeof str === 'object' ? str : {};
+    
+    // Remove curly braces at beginning and end
+    const cleanedStr = str.replace(/^{|}$/g, '');
+    
+    const result = {};
+    const pairs = cleanedStr.split(',');
+    
+    pairs.forEach(pair => {
+      const colonIndex = pair.indexOf(':');
+      if (colonIndex !== -1) {
+        const key = pair.slice(0, colonIndex).trim();
+        const value = pair.slice(colonIndex + 1).trim();
+        if (value) {
+          result[key] = value;
+        }
+      }
+    });
+    
+    return result;
+  };
 
-  const turfAmenitiesArray = convertToArray(singleTurfDetail.turf_amenities);
+  const turfAmenitiesArray = convertToArray(singleTurfDetail.amenities);
+  const parsedOpeningHours = parseOpeningHours(singleTurfDetail.openingHour);
   return (
     <>
       <main className="py-4">
-      <Breadcrumb />
+        <Breadcrumb />
         <section className="w-[88%] mx-auto py-3 ">
-        <h2 className="hidden tablet:block text-[32px] font-black my-2">
-          {singleTurfDetail.turf_name}
-          </h2> 
-        {/* first section */}  
-  <div className="tablet:flex tablet:justify-between tablet:gap-8"> 
-      <div className="tablet:w-[70%]">
-          <div className="hidden tablet:flex tablet:gap-3 ">
-            <p className="text-gray-600 ">
-              {singleTurfDetail.turf_place}
-            </p>   
-            <div className="flex items-center gap-1 ">
-              <img src={starIcon} alt="Rating" className="w-5 h-5"/>
-              <span className="font-semibold text-[0.9rem]">
-                {singleTurfDetail.turf_avg_rating}
-              </span>
-              <span className="text-[0.8rem] text-gray-700">
-                ({singleTurfDetail.turf_no_of_rating} ratings)
-                </span>
-              </div>     
-          </div>
-          
-      {/* Turf Image */}
-          <div className="w-full h-[50vw] tablet:h-[35vw] ">
-            <img 
-              src={singleTurfDetail.turf_imgurl1} 
-              alt={singleTurfDetail.turf_name}
-              className="w-full h-full rounded-lg my-4 object-cover"
-            />
+          <h2 className="hidden tablet:block text-[32px] font-black my-2">
+            {singleTurfDetail.name}
+          </h2>
+          {/* first section */}
+          <div className="tablet:flex tablet:justify-between tablet:gap-8">
+            <div className="tablet:w-[70%]">
+              <div className="hidden tablet:flex tablet:gap-3 ">
+                <p className="text-gray-600 ">
+                  {singleTurfDetail.city}
+                </p>
+                <div className="flex items-center gap-1 ">
+                  <img src={starIcon} alt="Rating" className="w-5 h-5" />
+                  <span className="font-semibold text-[0.9rem]">
+                    {singleTurfDetail.avgRating}
+                  </span>
+                  <span className="text-[0.8rem] text-gray-700">
+                    ({singleTurfDetail.noOfRating} ratings)
+                  </span>
+                </div>
               </div>
-      <div className="hidden tablet:block">   
-        <SportAvailableSection availableSport={singleTurfDetail.turf_sports} />
-                <AmenitiesSection availableAmenities={turfAmenitiesArray} /> 
 
-        <AboutVenueSection aboutVenue={singleTurfDetail.turf_about} />
-      </div> 
-      </div>   
-        <h2 className="tablet:hidden text-2xl font-black my-2">
-          {singleTurfDetail.turf_name}
-        </h2>
-        
-        <div className="tablet:hidden">
-        <p className="text-gray-600">
-          {singleTurfDetail.turf_place}
-        </p>   
-        <div className="flex items-center gap-1 my-1">
-          <img src={starIcon} alt="Rating" className="w-5 h-5"/>
-          <span className="font-semibold text-[0.9rem]">
-            {singleTurfDetail.turf_avg_rating}
-          </span>
-          <span className="text-[0.8rem] text-gray-700">
-            ({singleTurfDetail.turf_no_of_rating} ratings)
-          </span>
-          </div>     
-        </div>
-          {/* second section */} 
+              {/* Turf Image */}
+              <div className="w-full h-[50vw] tablet:h-[35vw] ">
+                <img
+                  src={singleTurfDetail.imageUrl}
+                  alt={singleTurfDetail.name}
+                  className="w-full h-full rounded-lg my-4 object-cover"
+                />
+              </div>
+              <div className="hidden tablet:block">
+                <SportAvailableSection availableSport={singleTurfDetail.sports} />
+                <AmenitiesSection availableAmenities={turfAmenitiesArray} />
+
+                <AboutVenueSection aboutVenue={singleTurfDetail.about} />
+              </div>
+            </div>
+            <h2 className="tablet:hidden text-2xl font-black my-2">
+              {singleTurfDetail.name}
+            </h2>
+
+            <div className="tablet:hidden">
+              <p className="text-gray-600">
+                {singleTurfDetail.city}
+              </p>
+              <div className="flex items-center gap-1 my-1">
+                <img src={starIcon} alt="Rating" className="w-5 h-5" />
+                <span className="font-semibold text-[0.9rem]">
+                  {singleTurfDetail.avgRating}
+                </span>
+                <span className="text-[0.8rem] text-gray-700">
+                  ({singleTurfDetail.noOfRating} ratings)
+                </span>
+              </div>
+            </div>
+            {/* second section */}
             <div className="tablet:w-[30%]">
-                <img src={offerCard} alt="" className="w-full my-10 object-cover hidden laptop:block" />
-              <Link to={`/Book/${singleTurfDetail.turf_id}/book-this-turf`}>
+              <img src={offerCard} alt="" className="w-full my-10 object-cover hidden laptop:block" />
+              <Link to={`/Book/${singleTurfDetail.id}/book-this-turf`}>
                 <button className="bg-[#00B562] text-white py-3 px-4 rounded-lg w-full mt-4 tablet:mt-0">
                   Book Now
                 </button>
               </Link>
-              
+
               <div className="flex justify-between gap-2 mt-3">
                 <button className="flex items-center gap-1 font-bold border-gray-300 border-2 py-2 w-[50%] rounded-lg justify-center">
-                  <img src={shareIcon} alt="Share" className="w-7"/>
+                  <img src={shareIcon} alt="Share" className="w-7" />
                   Share
                 </button>
                 <button className="font-bold border-[#00B562] border py-2 rounded-lg text-[#00B562] w-[50%]">
@@ -126,44 +149,44 @@ function TurfDetailPage({turfs}) {
                 </button>
               </div>
 
-              <TimingSection openingHours={singleTurfDetail.turf_opening_hours} />
-        
-              
-              <LocationSection 
-                address={singleTurfDetail.turf_address}
-                mapUrl={singleTurfDetail.turf_map}
-                />
+              <TimingSection openingHours={parsedOpeningHours} />
+
+
+              <LocationSection
+                address={singleTurfDetail.address}
+                mapUrl={singleTurfDetail.mapUrl}
+              />
+            </div>
           </div>
-        </div>
-      <div className="tablet:hidden">   
-        <SportAvailableSection availableSport={singleTurfDetail.turf_sports} />
-        <AmenitiesSection availableAmenities={turfAmenitiesArray} /> 
-        <AboutVenueSection aboutVenue={singleTurfDetail.turf_about} />
-      </div> 
-        
           <div className="tablet:hidden">
-          <Link to={`/Book/${singleTurfDetail.turf_id}/book-this-turf`}>
-          <button className="bg-[#00B562] text-white py-3 px-4 rounded-lg w-full mt-4">
-          Book Now
+            <SportAvailableSection availableSport={singleTurfDetail.sports} />
+            <AmenitiesSection availableAmenities={turfAmenitiesArray} />
+            <AboutVenueSection aboutVenue={singleTurfDetail.about} />
+          </div>
+
+          <div className="tablet:hidden">
+            <Link to={`/Book/${singleTurfDetail.id}/book-this-turf`}>
+              <button className="bg-[#00B562] text-white py-3 px-4 rounded-lg w-full mt-4">
+                Book Now
               </button>
-          </Link>
-        
-        <div className="flex justify-between gap-2 mt-3">
-          <button className="flex items-center gap-1 font-bold border-gray-300 border-2 py-2 w-[50%] rounded-lg justify-center">
-            <img src={shareIcon} alt="Share" className="w-7"/>
-            Share
-          </button>
-          <button className="font-bold border-[#00B562] border py-2 rounded-lg text-[#00B562] w-[50%]">
-            Bulk / Corporate
-          </button>
-        </div>
-        </div>
-      </section>
+            </Link>
+
+            <div className="flex justify-between gap-2 mt-3">
+              <button className="flex items-center gap-1 font-bold border-gray-300 border-2 py-2 w-[50%] rounded-lg justify-center">
+                <img src={shareIcon} alt="Share" className="w-7" />
+                Share
+              </button>
+              <button className="font-bold border-[#00B562] border py-2 rounded-lg text-[#00B562] w-[50%]">
+                Bulk / Corporate
+              </button>
+            </div>
+          </div>
+        </section>
       </main>
-      <Footer/>
+      <Footer />
     </>
-    
-    
+
+
   );
 }
 

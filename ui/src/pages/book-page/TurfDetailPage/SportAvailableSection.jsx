@@ -24,7 +24,7 @@ const SportAvailableSection = ({ availableSport }) => {
     // Split by comma, clean up each item
     return withoutBraces
       .split(',')
-      .map(item => item.replace(/"/g, '').trim())
+      .map(item => item.replace(/"/g, '').trim().toLowerCase())
       .filter(item => item.length > 0);
   };
 

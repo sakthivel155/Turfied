@@ -81,7 +81,7 @@ function App() {
         <Route path='/Book' element={<Book currentCity={currentCity} setCurrentCity={setCurrentCity}
           turfs={turfs} setTurfs={setTurfs} />} />
         <Route path='/Book/:turf_id' element={<TurfDetailPage turfs={turfs} />} />
-        <Route path='/Book/:turf_id/book-this-turf' element={<BookThisTurf turfs={turfs}/>} />
+        <Route path='/Book/:turf_id/book-this-turf' element={<ProtectedRoute><BookThisTurf turfs={turfs}/></ProtectedRoute>} />
         <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
