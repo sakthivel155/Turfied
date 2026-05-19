@@ -5,7 +5,7 @@ import starIcon from '../../assets/icons/turf-card/star-icon.svg';
 import shareIcon from '../../assets/icons/turf-card/share-icon.svg';
 import offerCard from '../../assets/images/offerCard.svg'
 import Footer from "../../components/Footer";
-
+import { useAuth } from "../../context/useAuth";
 
 
 
@@ -34,6 +34,14 @@ const convertToArray = (str) => {
 function TurfDetailPage({ turfs }) {
   const { turf_id } = useParams();
   const [singleTurfDetail, setSingleTurfDetail] = useState(null);
+  const { isAuthenticated } = useAuth();
+
+  const handleBookNowClick = (e) => {
+    if (!isAuthenticated) {
+      e.preventDefault();
+      window.dispatchEvent(new Event('openLogin'));
+    }
+  };
 
   useEffect(() => {
     const numericId = Number(turf_id);
@@ -133,7 +141,7 @@ function TurfDetailPage({ turfs }) {
             {/* second section */}
             <div className="tablet:w-[30%]">
               <img src={offerCard} alt="" className="w-full my-10 object-cover hidden laptop:block" />
-              <Link to={`/Book/${singleTurfDetail.id}/book-this-turf`}>
+              <Link to={`/Book/${singleTurfDetail.id}/book-this-turf`} onClick={handleBookNowClick}>
                 <button className="bg-[#00B562] text-white py-3 px-4 rounded-lg w-full mt-4 tablet:mt-0">
                   Book Now
                 </button>
@@ -165,7 +173,7 @@ function TurfDetailPage({ turfs }) {
           </div>
 
           <div className="tablet:hidden">
-            <Link to={`/Book/${singleTurfDetail.id}/book-this-turf`}>
+            <Link to={`/Book/${singleTurfDetail.id}/book-this-turf`} onClick={handleBookNowClick}>
               <button className="bg-[#00B562] text-white py-3 px-4 rounded-lg w-full mt-4">
                 Book Now
               </button>

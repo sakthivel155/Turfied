@@ -31,6 +31,11 @@ function App() {
     };
 
     fetchLocation();
+    
+    const handleOpenLogin = () => setIsLoginVisible(true);
+    window.addEventListener('openLogin', handleOpenLogin);
+    
+    return () => window.removeEventListener('openLogin', handleOpenLogin);
   }, []); // Empty dependency array means this runs once on component mount
 
   async function getGeolocation() {

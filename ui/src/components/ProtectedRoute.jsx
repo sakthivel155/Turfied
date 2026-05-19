@@ -1,6 +1,8 @@
 import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useAuth } from '../context/useAuth';
+import { useEffect } from 'react';
+
 
 /**
  * Protected Route Component
@@ -8,6 +10,13 @@ import { useAuth } from '../context/useAuth';
  */
 export function ProtectedRoute({ children }) {
   const { isAuthenticated, loading } = useAuth();
+
+  useEffect(() => {
+    if (!loading && !isAuthenticated) {
+      window.dispatchEvent(new Event('openLogin'));
+    }
+  }, [loading, isAuthenticated]);
+
 
   if (loading) {
     return (

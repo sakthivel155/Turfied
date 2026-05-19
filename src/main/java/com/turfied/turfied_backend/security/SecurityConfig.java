@@ -48,7 +48,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/v1/bookings").hasRole("USER")
                         .requestMatchers(HttpMethod.GET, "/api/v1/bookings/me").hasAnyRole("USER", "ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/v1/bookings/*/cancel").hasAnyRole("USER", "ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/api/v1/bookings/available-slots").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/api/v1/bookings/available-slots").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/turfs", "/api/v1/turfs/*").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/courts/**", "/api/v1/slots/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/turfs/owner/me").hasAnyRole("OWNER", "ADMIN")
