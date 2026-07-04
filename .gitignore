@@ -35,3 +35,4 @@ src/main/resources/static
 
 # application.properties (local dev only)
 application.properties
+.env
